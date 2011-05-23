@@ -1,0 +1,146 @@
+// Copyright 2009 Clever Coding LLC. All rights reserved.
+//
+// The EAGLView class is the main 3D view.  All of the rendering is in this class
+// except for the Markers although the markers are instantiated and called from this class.
+//
+
+#import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <OpenGLES/EAGL.h>
+#import <OpenGLES/ES1/gl.h>
+#import <OpenGLES/ES1/glext.h>
+#import "GlobeMarker.h";
+#import "MarkersForGlobeList.h"
+#import "SmoothRotator.h";
+#import "MapViewController.h"
+
+
+//for globe demo
+#import <CoreLocation/CoreLocation.h>
+#import <CoreLocation/CLLocationManagerDelegate.h>
+
+
+typedef enum {
+	none = 0,
+	zoomIn,
+	zoomedIn,
+	zoomOut,
+	zoomedOut
+} ZoomEffect;
+
+typedef enum {
+	map = 0,       //Always show the countries' map
+	natural,       //Never show the coutries' map
+	antique,       //antique looking map
+	swapMap        //Swap out the countries' map at ZOOM_SWAP_DISTANCE in GlobeConstants.h
+} MapSwapState;
+
+/*
+This class wraps the CAEAGLLayer from CoreAnimation into a convenient UIView subclass.
+The view content is basically an EAGL surface you render your OpenGL scene into.
+Note that setting the view non-opaque will only work if the EAGL surface has an alpha channel.
+*/
+@interface EAGLView : UIView <CLLocationManagerDelegate, MKReverseGeocoderDelegate>{
+    
+@private
+    /* The pixel dimensions of the backbuffer */
+    GLint backingWidth;
+    GLint backingHeight;
+    
+    EAGLContext *context;
+    
+    /* OpenGL names for the renderbuffer and framebuffers used to render to this view */
+    GLuint viewRenderbuffer, viewFramebuffer;
+    
+    /* OpenGL name for the depth buffer that is attached to viewFramebuffer, if it exists (0 if it does not exist) */
+    GLuint depthRenderbuffer;
+    
+    NSTimer *animationTimer;
+    NSTimeInterval animationInterval;
+	
+	GLuint m_texture[5][1];
+	//GLuint m_texture[3][1];
+	SmoothRotator * smoothRotator;
+	float focalLengthX;
+	float focalLengthY;
+
+	//Total Coordinates
+	int totalCoordinates;
+    GlobeMarker* markers[5000];
+
+	float diffX;
+	float diffY;
+	float rotX;
+	float rotY;
+	float viewWidth;
+	float viewHeight;
+	CGPoint firstTouch;
+	CGPoint prevPoint;
+	CGFloat previousDistance;
+    CGFloat zoomFactor;
+	
+	float PI;
+	BOOL looking;
+	float offset;
+	BOOL touchMomentum;
+	float momentumX;
+	float momentumY;
+	float usersLat;
+	float usersLon;
+    float curLat;
+	float curLon;
+	float rotateBounds;
+	int delayCount;
+	ZoomEffect currentZoomEffect;
+	MarkersForGlobeList *theMarkerList;
+	GlobeMarker *theCurrentMarker;
+	GlobeMarker *usersLocationMarker;
+	MKPinAnnotationView *myView;
+    MKReverseGeocoder *reverseGeocoder;
+	CLLocation* touchedLocation;
+	IBOutlet UIViewController *parentVC;
+	
+	//For Demo Globe
+	IBOutlet UISegmentedControl *rotateConrol;
+	IBOutlet UISegmentedControl *glowControl;
+	IBOutlet UISegmentedControl *mapStateControl;
+	IBOutlet UIButton           *curLocationButton;
+	BOOL showMarkers;
+	MapSwapState mapSwapState;
+	BOOL rotateOn;
+	CLLocationManager *locationManager;
+	
+}
+
+@property NSTimeInterval animationInterval;
+@property (nonatomic, assign) BOOL looking;
+@property (nonatomic, assign) float usersLat;
+@property (nonatomic, assign) float usersLon;
+@property (nonatomic, assign) ZoomEffect currentZoomEffect;
+@property (nonatomic, assign) UIViewController *parentVC;
+@property (nonatomic, assign) GlobeMarker *usersLocationMarker;
+
+- (void) addGlobeMarker:(GlobeMarker*)theMarker;
+- (void) addMarkerX: (float)xIn Y: (float) yIn Z: (float) zIn;                 //????
+- (void) startAnimation;
+- (void) stopAnimation;
+- (void) drawView;
+- (void) loadTextureNumber: (int)index Name: (NSString*) name;
+- (void) drawMarkers;
+- (void) setGlobeMarkerRenderEffect: (GlobeMarkerRenderEffect) effect;
+- (void) lookAtMarker:(GlobeMarker*)theMarker;
+- (BOOL) raySphereIntersectX:(float)x andY:(float)y andVector:(Vector3 *)loc;
+- (void) initializeTheMarkerList;
+- (void) getAsingleMarker;
+- (void) reverseGeocodeLocation:(CLLocation*)theLocation;
+- (void) showMarkerOnGoogleMaps:(MKPlacemark*)thePlace;
+- (void) initGlobeSizeByOrientation:(UIInterfaceOrientation)interfaceOrientation;
+
+//For Demo Globe
+-(IBAction)rotateConrolAction:(id)sender;
+-(IBAction)glowControlAction:(id)sender;
+-(IBAction)mapStateControlAction:(id)sender;
+-(IBAction)curLocationButtonAction:(id)sender;
+-(IBAction)showGoogleMaps:(id)sender;
+
+@end

@@ -1,0 +1,188 @@
+//  Copyright 2009 Clever Coding LLC. All rights reserved.
+//  Texture2D.h is mostly borrowed from Apple example code
+//     it was put in this class to make the code more managable
+//
+//  GlobeMarker.h handles all the rendering for the markers
+
+#import "GlobeMarker.h"
+#import "Textures.h"
+#import <OpenGLES/ES1/glext.h>
+#define kMaxTextureSize	 1024
+
+@implementation GlobeMarker
+
+@synthesize location;
+@synthesize mapKitMarker;
+@synthesize locationDetails;
+
+-(GlobeMarker*)initWithX: (float) xIn Y: (float) yIn Z: (float) zIn
+{
+	self = [super init];
+	
+	if( self ){
+		BoxRadius = 0.075;
+		bounds = CGRectMake(-BoxRadius/2, -BoxRadius/2, BoxRadius, BoxRadius);
+		transX = xIn;	transY = yIn;	transZ = zIn;
+		drawPoint = NO;
+		
+		locationsVertices[0] = 0.0;
+		locationsVertices[1] = 1.0;
+		locationsVertices[2] = 0.0;
+		
+		locationsVertexCount = 1;
+		locationsIndices[0] = 0;
+		locationsIndices[1] = 1;
+		locationsIndices[2] = 2;
+		
+		locationsIndexCount = 3;
+		locationsNumVertices = 1;
+
+		currentEffect = glow;
+	}
+	return self;
+}
+
+-(void)renderRotX: (float)xIn rotY: (float)yIn rotZ: (float)zIn zoom: (float)zoom offset: (float) offset
+{
+	//Zoom range is [-10, -6.5] -> [far, close]
+	//Bounds raide is .075 @ -10
+	//It needs to look the same size at -6.5
+	
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+		// The device is an iPad running iPhone 3.2 or later.
+		offset += 1.002;
+		BoxRadius = .030*zoom/10;
+	}
+	else
+	{
+		// The device is an iPhone or iPod touch.
+		offset += 1.008;
+		BoxRadius = .055*zoom/10;
+	}
+	
+	bounds = CGRectMake(-BoxRadius/2, -BoxRadius/2, BoxRadius, BoxRadius);
+	
+	[self renderRotX: xIn rotY: yIn rotZ: zIn offset: offset];
+}
+
+-(void)renderRotX: (float)xIn rotY: (float)yIn rotZ: (float)zIn offset: (float)offset
+{
+	float scaleFactor = 1; 
+	
+	switch( currentEffect )
+	{
+		case glow:
+			//Draw Glow
+			glPushMatrix();
+			glScalef(offset, offset, offset);
+			
+			glVertexPointer(3, GL_FLOAT, 0, locationsVertices);
+			glTranslatef( transX, transY+1.0, transZ );
+			glRotatef(xIn+90, 0.0f, 0.0f, 1.0f);
+			glRotatef(yIn, 0.0f, 1.0f, 0.0f);
+			glScalef(.75, .75, .75);
+			float selectGlow = random() % 100;
+			
+			//Textures *commonAPI = [Textures global_textures];
+			
+			
+			if( selectGlow < 50 )
+				[[[Textures global_textures] glow1] drawInRect:bounds];
+			else if( selectGlow < 96 )
+				[[[Textures global_textures] glow2] drawInRect:bounds]; 
+			else
+				[[[Textures global_textures] glow3] drawInRect:bounds]; 
+			glPopMatrix();
+			break;
+		case pin:
+			//Draw Pin Head
+			glPushMatrix();
+			glScalef(1.02+offset, 1.02+offset, 1.02+offset);
+			
+			glTranslatef( transX, transY+1.0, transZ );
+			glRotatef(xIn+90, 0.0f, 0.0f, 1.0f);
+			glRotatef(yIn, 0.0f, 1.0f, 0.0f);
+			
+			glScalef(.65, .65, .65);
+			
+			[[[Textures global_textures] sphere] drawInRect:bounds];
+			
+			glPopMatrix();
+			
+			//Draw pinShaft
+			/*glDisable(GL_BLEND);
+			glDisable(GL_TEXTURE_2D); 
+			GLfloat vVertices[] = {0, 1, 0, transX, transY+1, transZ};
+			glColor4f( .5, .5, .5, 1);//Change the object color to red
+			glLineWidth(1.5f);
+			glVertexPointer(3, GL_FLOAT, 0, vVertices);
+			glEnableClientState(GL_VERTEX_ARRAY);
+			glDrawArrays(GL_LINES, 0, 2); 
+			glEnable(GL_BLEND);
+			glEnable(GL_TEXTURE_2D);*/
+		case twitter:
+			//Draw Twitter Bird
+			glPushMatrix();
+			glScalef(1.05+offset, 1.05+offset, 1.05+offset);
+			
+			glTranslatef( transX, transY+1.0, transZ );
+			glRotatef(xIn+90, 0.0f, 0.0f, 1.0f);
+			glRotatef(yIn, 0.0f, 1.0f, 0.0f);
+			
+			
+			glScalef(scaleFactor, scaleFactor, scaleFactor);
+			
+			[[[Textures global_textures] twitter] drawInRect:bounds];
+			
+			glPopMatrix();
+		case bubble:
+			//Draw Twitter Bird
+			glPushMatrix();
+			glScalef(1.05+offset, 1.05+offset, 1.05+offset);
+			
+			glTranslatef( transX, transY+1.0, transZ );
+			glRotatef(xIn+90, 0.0f, 0.0f, 1.0f);
+			glRotatef(yIn, 0.0f, 1.0f, 0.0f);
+			
+			glScalef(scaleFactor, scaleFactor, scaleFactor);
+			
+			[[[Textures global_textures] bubble] drawInRect:bounds];
+			
+			glPopMatrix();
+	}
+}
+
+-(void)setTransX: (float)transXIn transY: (float)transYIn transZ: (float)transZIn
+{
+	transX -= transXIn;	transY -= transYIn;	transZ -= transZIn;
+}
+
+-(void)setTransX: (float)transXIn transY: (float)transYIn transZ: (float)transZIn
+			rotX: (float)rotXIn rotY: (float)rotYIn rotZ: (float)rotZIn
+		  scaleX: (float)scaleXIn scaleY: (float)scaleYIn{
+	
+	transX = transXIn;	transY = transYIn;	transZ = transZIn;
+	rotX = rotXIn;		rotY = rotYIn;		rotZ = rotZIn;
+	scaleX = scaleXIn;	scaleY = scaleYIn;
+	bounds = CGRectMake(-(scaleX)/2, -(scaleY)/2, scaleX, scaleY);
+}
+
+-(BOOL)deltaTransX: (float)transXIn transY: (float)transYIn transZ: (float)transZIn
+			  rotX: (float)rotXIn rotY: (float)rotYIn rotZ: (float)rotZIn
+			scaleX: (float)scaleXIn scaleY: (float) scaleYIn{
+	
+	transX -= transXIn;	transY -= transYIn;	transZ -= transZIn;
+	rotX -= rotXIn;		rotY -= rotYIn;		rotZ -= rotZIn;
+	if( scaleX >= 0.1 )
+	{
+		scaleX -= scaleXIn;	scaleY -= scaleYIn;
+		bounds = CGRectMake(-(scaleX)/2, -(scaleY)/2, scaleX, scaleY);
+		return NO;
+	}else
+	{
+		return YES;
+	}
+}
+@end
+

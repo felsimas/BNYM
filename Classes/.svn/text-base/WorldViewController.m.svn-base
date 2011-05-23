@@ -1,0 +1,62 @@
+//  Copyright 2009 Clever Coding LLC. All rights reserved.
+//  
+//  The WorldViewController class and XIB is just for convience for the Globe Demo.
+//  When implementing the 3D Globe you can reuse this class and XIB or just add a
+//  view with the class set as EAGLView on to an XIB of your chosing 
+//
+
+#import "WorldViewController.h"
+
+@implementation WorldViewController
+
+- (void)viewDidAppear:(BOOL)animated{
+	NSLog(@"got here vda");
+	//[activityIndicator stopAnimating];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+	//NSLog(@"got here vdd");
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+	NSLog(@"got here vwa");
+	countriesSegment.tintColor = [UIColor darkGrayColor];
+	glowSegment.tintColor = [UIColor darkGrayColor];
+	rotateSegment.tintColor = [UIColor darkGrayColor];
+	self.navigationController.navigationBarHidden = YES;
+	self.title = @"Globe";
+	NSLog(@"end vwa");
+	
+	[theGlobe initGlobeSizeByOrientation:self.interfaceOrientation];
+	[theGlobe startAnimation];
+	
+}	
+
+- (void)viewWillDisappear:(BOOL)animated{
+	NSLog(@"got here vwd");
+	[theGlobe stopAnimation];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	NSLog(@"BEGIN: shouldAutorotateToInterfaceOrientation");
+
+		
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+		return YES;
+	else {
+		//it is an iPhone so don't auto rotate
+		return NO;
+	}
+
+	
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+	NSLog(@"BEGIN: didRotateFromInterfaceOrientation");
+	[theGlobe stopAnimation];
+	[theGlobe initGlobeSizeByOrientation:self.interfaceOrientation];
+	[theGlobe startAnimation];
+}
+
+
+@end

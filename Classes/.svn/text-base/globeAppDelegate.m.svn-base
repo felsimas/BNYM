@@ -1,0 +1,26 @@
+//
+//  globeAppDelegate.m
+//  globe
+//
+//  Copyright 2009 Clever Coding LLC. All rights reserved.
+//
+
+#import "globeAppDelegate.h"
+
+@implementation globeAppDelegate
+
+@synthesize window;
+@synthesize navigationController;
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+	[window addSubview:[navigationController view]];
+}
+
+
+
+- (void)dealloc {
+	[window release];
+	[super dealloc];
+}
+
+@end

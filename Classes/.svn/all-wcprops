@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/3DGlobe/!svn/ver/16/xCode/UniversialGlobe/Classes
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/main.m
+END
+globeAppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/globeAppDelegate.m
+END
+SmoothRotator.m
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/SmoothRotator.m
+END
+GlobeMarker.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/GlobeMarker.h
+END
+WorldViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/3DGlobe/!svn/ver/16/xCode/UniversialGlobe/Classes/WorldViewController.m
+END
+GlobeMarker.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/GlobeMarker.m
+END
+SettingsViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/SettingsViewController.h
+END
+EAGLView.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/3DGlobe/!svn/ver/18/xCode/UniversialGlobe/Classes/EAGLView.h
+END
+SettingsViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/SettingsViewController.m
+END
+EAGLView.m
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/3DGlobe/!svn/ver/18/xCode/UniversialGlobe/Classes/EAGLView.m
+END
+MarkersForGlobeList.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/MarkersForGlobeList.h
+END
+Textures.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/Textures.h
+END
+globeAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/globeAppDelegate.h
+END
+SmoothRotator.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/SmoothRotator.h
+END
+MarkersForGlobeList.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/MarkersForGlobeList.m
+END
+GlobeConstants.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/GlobeConstants.h
+END
+WorldViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/WorldViewController.h
+END
+Textures.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/3DGlobe/!svn/ver/5/xCode/UniversialGlobe/Classes/Textures.m
+END
