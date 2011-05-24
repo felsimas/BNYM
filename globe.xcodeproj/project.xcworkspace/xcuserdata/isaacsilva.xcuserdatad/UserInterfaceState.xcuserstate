@@ -9962,8 +9962,8 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>327914080.65804702</real>
-		<string>{2098, 1311}</string>
+		<real>327914555.21008903</real>
+		<string>{1148, 1513}</string>
 		<string>{848, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -30664,8 +30664,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>327914080.66053098</real>
-		<string>{2098, 1311}</string>
+		<real>327914555.21259397</real>
+		<string>{1148, 1513}</string>
 		<string>{848, 0}</string>
 		<string>@implementation CustomMoviePlayerViewController</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
@@ -31313,7 +31313,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{110, 18}, {1314, 860}}</string>
+		<string>{{110, 6}, {1314, 860}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
