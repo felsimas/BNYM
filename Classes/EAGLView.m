@@ -1119,7 +1119,7 @@ static GLfloat flippedNormals[500*3];
 - (void)dealloc {
     [smoothRotator release];
     [popUpViewController release];
-    [popoverController release];
+   // [popoverController release];
     [self stopAnimation];
     
     if ([EAGLContext currentContext] == context) {
@@ -1420,7 +1420,7 @@ static GLfloat flippedNormals[500*3];
     
 	//present the popover view non-modal with a
 	//refrence to the button pressed within the current view
-	[self.popoverController presentPopoverFromRect:CGRectMake(510.0f, 300.f, 10.0f, 10.0f) inView:self 
+	[self.popoverController presentPopoverFromRect:CGRectMake(510.0f, 340.f, 10.0f, 10.0f) inView:self 
 						  permittedArrowDirections:0
 										  animated:YES];
     

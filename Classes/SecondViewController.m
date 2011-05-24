@@ -54,8 +54,6 @@
     self.tabBarItem=tabItem;
     [tabItem release]; 
     tabItem=nil;    
-    
-    
 	
 }
 
@@ -79,6 +77,7 @@
     [[TwitterAuthController alloc] initWithNibName:@"TwitterAuthController_iPad" 
                                             bundle:nil];
 	[self.view addSubview:controller.view];
+    [TwitterAuthController release];
    // [self.navigationController pushViewController:controller
                                      //    animated:YES];
 }

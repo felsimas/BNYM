@@ -108,6 +108,7 @@
     [rootViewController_custom release];
     [rootViewController_globe release];
     [rootViewController_presentation release];
+    [tabBarController release];
 	[super dealloc];
 }
 

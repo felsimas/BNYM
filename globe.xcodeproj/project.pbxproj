@@ -20,6 +20,11 @@
 		0118DAC6137BBE55000FFAFD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118DAC4137BBE54000FFAFD /* SecondViewController.m */; };
 		0118DAC9137BC226000FFAFD /* TBBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0118DAC8137BC226000FFAFD /* TBBackground.png */; };
 		0118DAF1137BC524000FFAFD /* navigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0118DAF0137BC524000FFAFD /* navigationBar.png */; };
+		01324FC1138B7AE60022CAA7 /* popup_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 01324FC0138B7AE60022CAA7 /* popup_video.png */; };
+		01324FD1138B7C230022CAA7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01324FD0138B7C230022CAA7 /* MediaPlayer.framework */; };
+		01324FD3138B7C840022CAA7 /* BNYM Hang Glider_720_h264.mov in Resources */ = {isa = PBXBuildFile; fileRef = 01324FD2138B7C840022CAA7 /* BNYM Hang Glider_720_h264.mov */; };
+		01324FDE138B83A10022CAA7 /* CustomMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01324FDD138B83A10022CAA7 /* CustomMoviePlayerViewController.m */; };
+		01324FE0138B868F0022CAA7 /* video_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 01324FDF138B868F0022CAA7 /* video_play.png */; };
 		01A54D941389EE6E008AF732 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54D921389EE6C008AF732 /* FirstView.xib */; };
 		01A54D951389EE6E008AF732 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54D931389EE6D008AF732 /* SecondView.xib */; };
 		01A54D991389EE77008AF732 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A54D981389EE77008AF732 /* FirstViewController.m */; };
@@ -121,6 +126,12 @@
 		0118DAC4137BBE54000FFAFD /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0118DAC8137BC226000FFAFD /* TBBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TBBackground.png; sourceTree = "<group>"; };
 		0118DAF0137BC524000FFAFD /* navigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationBar.png; sourceTree = "<group>"; };
+		01324FC0138B7AE60022CAA7 /* popup_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup_video.png; sourceTree = "<group>"; };
+		01324FD0138B7C230022CAA7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		01324FD2138B7C840022CAA7 /* BNYM Hang Glider_720_h264.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "BNYM Hang Glider_720_h264.mov"; sourceTree = "<group>"; };
+		01324FDC138B83A10022CAA7 /* CustomMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMoviePlayerViewController.h; sourceTree = "<group>"; };
+		01324FDD138B83A10022CAA7 /* CustomMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMoviePlayerViewController.m; sourceTree = "<group>"; };
+		01324FDF138B868F0022CAA7 /* video_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_play.png; sourceTree = "<group>"; };
 		01A54D921389EE6C008AF732 /* FirstView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstView.xib; sourceTree = "<group>"; };
 		01A54D931389EE6D008AF732 /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
 		01A54D971389EE76008AF732 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
@@ -231,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01324FD1138B7C230022CAA7 /* MediaPlayer.framework in Frameworks */,
 				8D1E904811916E6100D6FB0A /* CoreLocation.framework in Frameworks */,
 				8D1E904C11916E7600D6FB0A /* CoreGraphics.framework in Frameworks */,
 				8D1E905011916E8200D6FB0A /* QuartzCore.framework in Frameworks */,
@@ -258,6 +270,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				01324FDC138B83A10022CAA7 /* CustomMoviePlayerViewController.h */,
+				01324FDD138B83A10022CAA7 /* CustomMoviePlayerViewController.m */,
 				01A54D921389EE6C008AF732 /* FirstView.xib */,
 				01A54D971389EE76008AF732 /* FirstViewController.h */,
 				01A54D981389EE77008AF732 /* FirstViewController.m */,
@@ -330,6 +344,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				01324FD0138B7C230022CAA7 /* MediaPlayer.framework */,
 				8D22EEC50FBEF0420068ABFA /* 3Dmodel */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -377,6 +392,9 @@
 		8D22EEB80FBEF0420068ABFA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				01324FDF138B868F0022CAA7 /* video_play.png */,
+				01324FD2138B7C840022CAA7 /* BNYM Hang Glider_720_h264.mov */,
+				01324FC0138B7AE60022CAA7 /* popup_video.png */,
 				01B4F95F138B68960034ECC3 /* view_presentation1.png */,
 				01A54E1A138A4DEB008AF732 /* btn_window_popup_close.png */,
 				01A54E18138A49BC008AF732 /* popupContent.png */,
@@ -721,6 +739,9 @@
 				01B4F958138B63F50034ECC3 /* ScrollViewWithPagingViewController.xib in Resources */,
 				01B4F95E138B67ED0034ECC3 /* SecondViewController1.xib in Resources */,
 				01B4F960138B68960034ECC3 /* view_presentation1.png in Resources */,
+				01324FC1138B7AE60022CAA7 /* popup_video.png in Resources */,
+				01324FD3138B7C840022CAA7 /* BNYM Hang Glider_720_h264.mov in Resources */,
+				01324FE0138B868F0022CAA7 /* video_play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +778,7 @@
 				01A54E17138A4900008AF732 /* TwitterAuthController.m in Sources */,
 				01B4F957138B63F50034ECC3 /* ScrollViewWithPagingViewController.m in Sources */,
 				01B4F95D138B67ED0034ECC3 /* SecondViewController1.m in Sources */,
+				01324FDE138B83A10022CAA7 /* CustomMoviePlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
