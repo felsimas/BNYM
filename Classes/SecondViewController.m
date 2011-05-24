@@ -3,7 +3,7 @@
 
 #import "SecondViewController.h"
 #import "CustomTabBarItem.h"
-
+#import "globeAppDelegate.h"
 
 @implementation SecondViewController
 
@@ -12,7 +12,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 
-    
         CustomTabBarItem *tabItem = [[CustomTabBarItem alloc]
                                      initWithTitle:@"Presentation" image:nil tag:0];
         
@@ -35,6 +34,13 @@
 
     }
     return self;
+}
+
+
+- (IBAction)touchedGlobe:(id)sender{
+    NSLog(@"touched");   
+    globeAppDelegate *globeDelegate = (globeAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [globeDelegate setTabBarControllerAtIndex:0];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

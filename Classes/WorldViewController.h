@@ -5,9 +5,9 @@
 #import <Foundation/Foundation.h>
 #import "EAGLView.h"
 #import "DDKCustomTabbar.h"
-#import "ColorPickerController.h"
+#import "ChaptersMenuController.h"
 
-@interface WorldViewController : UIViewController <DDKTabBarDelegate, ColorPickerDelegate>{
+@interface WorldViewController : UIViewController <DDKTabBarDelegate, ChaptersMenuController,DismissPopDelegate>{
 	UIActivityIndicatorView *activityIndicator;
 	
 	IBOutlet UISegmentedControl *countriesSegment;
@@ -16,11 +16,11 @@
 	
 	IBOutlet EAGLView *theGlobe;
     
-    ColorPickerController *_colorPicker;
-    UIPopoverController *_colorPickerPopover;
+    ChaptersMenuController *_chaptersPicker;
+    UIPopoverController *_chaptersPickerPopover;
 }
 
-@property (nonatomic, retain) ColorPickerController *colorPicker;
-@property (nonatomic, retain) UIPopoverController *colorPickerPopover;
+@property (nonatomic, retain) ChaptersMenuController *chaptersPicker;
+@property (nonatomic, retain) UIPopoverController *chaptersPickerPopover;
 
 @end

@@ -3,6 +3,7 @@
 
 #import "WorldViewController.h"
 #import "CustomTabBarItem.h"
+#import "globeAppDelegate.h"
 
 @implementation UINavigationBar (CustomImage)
 - (void)drawRect:(CGRect)rect {
@@ -14,8 +15,8 @@
 
 @implementation WorldViewController
 
-@synthesize colorPicker = _colorPicker;
-@synthesize colorPickerPopover = _colorPickerPopover;
+@synthesize chaptersPicker = _chaptersPicker;
+@synthesize chaptersPickerPopover = _chaptersPickerPopover;
 
 - (void)viewDidAppear:(BOOL)animated{
 	NSLog(@"got here vda");
@@ -91,32 +92,27 @@
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)colorSelected:(NSString *)color {
-    if ([color compare:@"Red"] == NSOrderedSame) {
-     //   _nameLabel.textColor = [UIColor redColor];
-    } else if ([color compare:@"Green"] == NSOrderedSame) {
-      //  _nameLabel.textColor = [UIColor greenColor];
-    } else if ([color compare:@"Blue"] == NSOrderedSame){
-      //  _nameLabel.textColor = [UIColor blueColor];
-    }
-    [self.colorPickerPopover dismissPopoverAnimated:YES];
+- (void)chapterSelected:(NSString *)chapter {
+    [self.chaptersPickerPopover dismissPopoverAnimated:YES];
+    globeAppDelegate *globeDelegate = (globeAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [globeDelegate setTabBarControllerAtIndex:1];
 }
 
 - (void)showMenu:(id)sender{
     NSLog(@"show menu");
-    if (_colorPicker == nil) {
-        self.colorPicker = [[[ColorPickerController alloc] initWithStyle:UITableViewStylePlain] autorelease];
-        _colorPicker.delegate = self;
-        self.colorPickerPopover = [[[UIPopoverController alloc] initWithContentViewController:_colorPicker] autorelease];               
+    if (_chaptersPicker == nil) {
+        self.chaptersPicker = [[[ChaptersMenuController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+        _chaptersPicker.delegate = self;
+        self.chaptersPickerPopover = [[[UIPopoverController alloc] initWithContentViewController:_chaptersPicker] autorelease];               
     }
     
-    //[self.colorPickerPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    //[self.chaptersPickerPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     
-    [self.colorPickerPopover presentPopoverFromRect:CGRectMake(930.0f, -15.f, 10.0f, 10.0f) inView:self.view
+    [self.chaptersPickerPopover presentPopoverFromRect:CGRectMake(930.0f, -15.f, 10.0f, 10.0f) inView:self.view
 						  permittedArrowDirections:1
 										  animated:YES];
 
-   // [self.colorPickerPopover presentPopoverFromRect:CGRectMake(800.0f, 50.f, 10.0f, 10.0f) permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+   // [self.chaptersPickerPopover presentPopoverFromRect:CGRectMake(800.0f, 50.f, 10.0f, 10.0f) permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 
 }
 
@@ -197,8 +193,8 @@
 
 
 - (void)dealloc {
-    self.colorPicker = nil;
-    self.colorPickerPopover = nil;
+    self.chaptersPicker = nil;
+    self.chaptersPickerPopover = nil;
     [super dealloc];    
 }
 

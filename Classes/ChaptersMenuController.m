@@ -1,10 +1,10 @@
 //  Copyright 2011 Logic Diner. All rights reserved.
 
-#import "ColorPickerController.h"
+#import "ChaptersMenuController.h"
 
 
-@implementation ColorPickerController
-@synthesize colors = _colors;
+@implementation ChaptersMenuController
+@synthesize chapters = _chapters;
 @synthesize delegate = _delegate;
 
 #pragma mark -
@@ -28,13 +28,13 @@
     [super viewDidLoad];
     self.clearsSelectionOnViewWillAppear = NO;
     self.contentSizeForViewInPopover = CGSizeMake(250.0, 300.0);
-    self.colors = [NSMutableArray array];
-    [_colors addObject:@"Cover Slide"];
-    [_colors addObject:@"Financial Crisis Aftershock"];
-    [_colors addObject:@"Views on Market Drivers"];
-    [_colors addObject:@"New Firm, Expanded Focus"];
-    [_colors addObject:@"Expertise Across our Enterprise"];
-    [_colors addObject:@"Evolving Globally to Deliver Locally"];
+    self.chapters = [NSMutableArray array];
+    [_chapters addObject:@"Cover Slide"];
+    [_chapters addObject:@"Financial Crisis Aftershock"];
+    [_chapters addObject:@"Views on Market Drivers"];
+    [_chapters addObject:@"New Firm, Expanded Focus"];
+    [_chapters addObject:@"Expertise Across our Enterprise"];
+    [_chapters addObject:@"Evolving Globally to Deliver Locally"];
 }
 
 
@@ -77,7 +77,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [_colors count];
+    return [_chapters count];
 }
 
 
@@ -92,7 +92,7 @@
     }
     int size = 15;
     // Configure the cell...
-    NSString *color = [_colors objectAtIndex:indexPath.row];
+    NSString *color = [_chapters objectAtIndex:indexPath.row];
     cell.textLabel.text = color;
     cell.textLabel.font = [UIFont systemFontOfSize:size];
     cell.textLabel.textColor = [UIColor colorWithRed:144.0/255.0 green:144.0/255.0 blue:144.0/255.0 alpha:1];
@@ -146,8 +146,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (_delegate != nil) {
-        NSString *color = [_colors objectAtIndex:indexPath.row];
-        [_delegate colorSelected:color];
+        NSString *chapter = [_chapters objectAtIndex:indexPath.row];
+        [_delegate chapterSelected:chapter];
     }
 }
 
@@ -169,7 +169,7 @@
 
 
 - (void)dealloc {
-    self.colors = nil;
+    self.chapters = nil;
     self.delegate = nil;
     [super dealloc];
 }

@@ -1404,7 +1404,9 @@ static GLfloat flippedNormals[500*3];
 	self.popUpViewController = [[[PopupViewController alloc] 
                                  initWithNibName:@"ViewWithPicker" 
                                  bundle:[NSBundle mainBundle]] autorelease];
-	
+    
+    self.popUpViewController._delegate = self; 
+
 	//set popover content size
 	popUpViewController.contentSizeForViewInPopover = 
     CGSizeMake(popUpViewController.view.frame.size.width, popUpViewController.view.frame.size.height);
@@ -1422,6 +1424,10 @@ static GLfloat flippedNormals[500*3];
 						  permittedArrowDirections:0
 										  animated:YES];
     
+}
+
+- (void) closePopupWindow{
+    [self.popoverController dismissPopoverAnimated:YES];
 }
 
 

@@ -1,19 +1,19 @@
 //  Copyright 2011 Logic Diner. All rights reserved.
 
-#import "ThirdViewController.h"
+
+#import "SecondViewController1.h"
 #import "CustomTabBarItem.h"
 #import "globeAppDelegate.h"
 
-@implementation ThirdViewController
+@implementation SecondViewController1
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        
         CustomTabBarItem *tabItem = [[CustomTabBarItem alloc]
-                                     initWithTitle:@"Feedback Poll" image:nil tag:0];
+                                     initWithTitle:@"Presentation" image:nil tag:0];
         
         tabItem.customHighlightedImage=[UIImage imageNamed:@"tabIconSelected.png"];
         tabItem.customStdImage=[UIImage imageNamed:@"tabIcon.png"];       
@@ -36,10 +36,17 @@
     return self;
 }
 
+
+- (IBAction)touchedGlobe:(id)sender{
+    NSLog(@"touched");   
+    globeAppDelegate *globeDelegate = (globeAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [globeDelegate setTabBarControllerAtIndex:0];
+}
+
 - (void)viewWillAppear:(BOOL)animated{
     
     CustomTabBarItem *tabItem = [[CustomTabBarItem alloc]
-                                 initWithTitle:@"Feedback Poll" image:nil tag:0];
+                                 initWithTitle:@"Presentation" image:nil tag:0];
     
     tabItem.customHighlightedImage=[UIImage imageNamed:@"tabIconSelected.png"];
     tabItem.customStdImage=[UIImage imageNamed:@"tabIcon.png"];       
@@ -48,22 +55,7 @@
     [tabItem release]; 
     tabItem=nil;    
     
-    
 }
-
-- (IBAction)touchedGlobe:(id)sender{
-    NSLog(@"touched");   
-    globeAppDelegate *globeDelegate = (globeAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [globeDelegate setTabBarControllerAtIndex:0];
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
-}
-
 
 
 - (void)dealloc
@@ -78,6 +70,11 @@
     
     // Release any cached data, images, etc that aren't in use.
 }
+
+- (IBAction)moreOnThis{
+
+}
+
 
 #pragma mark - View lifecycle
 
@@ -94,6 +91,10 @@
     // e.g. self.myOutlet = nil;
 }
 
-
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
+}
 
 @end

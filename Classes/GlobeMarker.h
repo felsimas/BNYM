@@ -16,7 +16,7 @@
 //this factor pulls the billboard-syle mark out from the globe
 #define kSeparationFromGlobeFactor 0.1
 //the marks are currently of relatvie dimension 2x1.  And are sized accordingly
-#define kiPadMarkerSize 0.060
+#define kiPadMarkerSize 0.090
 #define kiPhoneMarkerSize 0.110
 //if you want custom dimension billboard, you will need to set the "bounds" for the mark in  GlobeMarker.m
 //
