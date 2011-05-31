@@ -40,18 +40,7 @@
 }
 
 -(void)generateTheList{
-	//[self addGlobeMarker:  53.344104  theLongitude:   -6.267494  locationName:@"Ireland"];
-	//[self addGlobeMarker:  51.481068  theLongitude:   -0.110152  locationName:@"England"];
-	
-	//[self addGlobeMarker:  53.480712  theLongitude:   -2.234376  locationName:@"England"];
-	
-	[self addGlobeMarker:  0.0  theLongitude:   0.0  locationName:@"zero"];
-    //	[self addGlobeMarker:  45.0  theLongitude:   0.0  locationName:@"45 0"];
-    //	[self addGlobeMarker:  45.0  theLongitude:   45.0  locationName:@"45 45"];
-    //	[self addGlobeMarker:  45.0  theLongitude:   -45.0  locationName:@"45 -45"];
-    //	[self addGlobeMarker:  0.0  theLongitude:   45.0  locationName:@"0 45"];
-    //	[self addGlobeMarker:  0.0  theLongitude:   -45.0  locationName:@"0 -45"];
-    //	
+
 	
 	[self addGlobeMarker:  52.523405  theLongitude:   13.411400  locationName:@"Germany"];
 	[self addGlobeMarker:  47.655113  theLongitude:  -76.367183  locationName:@"Canada"];
@@ -71,14 +60,7 @@
 	[self addGlobeMarker:  40.304107  theLongitude:   -3.691406  locationName:@"Madrid, Spain"];
 	[self addGlobeMarker: -30.089375  theLongitude:   31.113281  locationName:@"Durbin, South Africa"];
     
-	//srandom();
-	
-	//for(int x = 0; x < 4500; x++){
-	//	int random1 = random()%170;
-	//	int random2 = random()%360;
-	//	[self addGlobeMarker:  -89 + random1  theLongitude:   -189 + random2  locationName:@"Edinburgh, Scotland"];
-	//}
-	
+
 }
 
 //Destructor
