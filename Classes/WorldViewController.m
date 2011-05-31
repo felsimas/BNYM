@@ -92,6 +92,15 @@
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)launchPopupFromGlobe{
+	GlobePopupViewController *controller =
+    [[GlobePopupViewController alloc] initWithNibName:@"GlobePopupViewController" 
+                                            bundle:nil];
+	[self.view addSubview:controller.view];
+    [GlobePopupViewController release];
+}
+
+
 - (void)chapterSelected:(NSString *)chapter {
     [self.chaptersPickerPopover dismissPopoverAnimated:YES];
     globeAppDelegate *globeDelegate = (globeAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -158,6 +167,7 @@
 	//self.navigationController.navigationBarHidden = YES;
 	
 	[theGlobe initGlobeSizeByOrientation:self.interfaceOrientation];
+    [theGlobe setDelegate:self];
 	[theGlobe startAnimation];
     
 

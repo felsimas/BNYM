@@ -6,6 +6,8 @@
 #import "EAGLView.h"
 #import "DDKCustomTabbar.h"
 #import "ChaptersMenuController.h"
+#import "GlobePopupViewController.h"
+#import "TwitterAuthController.h"
 
 @interface WorldViewController : UIViewController <DDKTabBarDelegate, ChaptersMenuController,DismissPopDelegate>{
 	UIActivityIndicatorView *activityIndicator;

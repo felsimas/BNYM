@@ -12,7 +12,6 @@
 #import "MapViewController.h"
 #import "PopUpViewController.h"
 
-
 //for globe demo
 #import <CoreLocation/CoreLocation.h>
 #import <CoreLocation/CLLocationManagerDelegate.h>
@@ -37,12 +36,17 @@ typedef enum{
     gpsCoordinates
 } TouchBehavior;
 
+
+@protocol PopUpViewDelegate
+-(void)launchPopupFromGlobe;
+@end
+
 /*
  This class wraps the CAEAGLLayer from CoreAnimation into a convenient UIView subclass.
  The view content is basically an EAGL surface you render your OpenGL scene into.
  Note that setting the view non-opaque will only work if the EAGL surface has an alpha channel.
  */
-@interface EAGLView : UIView <CLLocationManagerDelegate, DismissPopDelegate, MKReverseGeocoderDelegate>{
+@interface EAGLView : UIView <CLLocationManagerDelegate, DismissPopDelegate, PopUpViewDelegate,MKReverseGeocoderDelegate>{
     
 @private
     /* The pixel dimensions of the backbuffer */
@@ -117,8 +121,10 @@ typedef enum{
 	CLLocationManager *locationManager;
     PopupViewController *popUpViewController;
     UIPopoverController *popoverController;
+    id<PopUpViewDelegate> *delegate;
 }
 
+@property(nonatomic, assign) id<PopUpViewDelegate> *delegate;
 @property (nonatomic, assign) CGFloat zoomFactor;
 @property (nonatomic, assign) GlobeMarker* theClosestMarker;
 @property NSTimeInterval animationInterval;

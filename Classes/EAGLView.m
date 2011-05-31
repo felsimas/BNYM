@@ -42,7 +42,7 @@ static GLfloat flippedNormals[500*3];
 @synthesize usersLocationMarker;
 @synthesize theClosestMarker;
 @synthesize zoomFactor;
-
+@synthesize delegate;
 @synthesize popUpViewController;
 @synthesize popoverController;
 // You must implement this method
@@ -91,7 +91,7 @@ static GLfloat flippedNormals[500*3];
 - (void) SetLightingModel:(BOOL)lightsOn {
 	
 	if (lightsOn) {
-		glEnable(GL_DEPTH_TEST);
+	/*	glEnable(GL_DEPTH_TEST);
 		glEnable(GL_BLEND);
 		glEnable(GL_TEXTURE_2D);
         
@@ -105,7 +105,17 @@ static GLfloat flippedNormals[500*3];
 		glEnable(GL_LIGHT0);
 		glEnable(GL_DEPTH_TEST);
 		
-		
+		*/
+        
+        glEnable(GL_DEPTH_TEST);
+		glEnable(GL_BLEND);
+		glEnable(GL_TEXTURE_2D);
+		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+		//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+        
+		glDisable(GL_LIGHTING);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	}
 	else {
 		glEnable(GL_DEPTH_TEST);
@@ -1118,6 +1128,7 @@ static GLfloat flippedNormals[500*3];
 //Destructor
 - (void)dealloc {
     [smoothRotator release];
+    [delegate release];
     [popUpViewController release];
    // [popoverController release];
     [self stopAnimation];
@@ -1401,7 +1412,7 @@ static GLfloat flippedNormals[500*3];
 
 - (void)showPopupWindow:(GlobeMarker*)thePlace{
 	//create the view controller from nib
-	self.popUpViewController = [[[PopupViewController alloc] 
+/*	self.popUpViewController = [[[PopupViewController alloc] 
                                  initWithNibName:@"ViewWithPicker" 
                                  bundle:[NSBundle mainBundle]] autorelease];
     
@@ -1422,8 +1433,10 @@ static GLfloat flippedNormals[500*3];
 	//refrence to the button pressed within the current view
 	[self.popoverController presentPopoverFromRect:CGRectMake(510.0f, 340.f, 10.0f, 10.0f) inView:self 
 						  permittedArrowDirections:0
-										  animated:YES];
+                                    animated:YES];
+    */
     
+    [self.delegate launchPopupFromGlobe];
 }
 
 - (void) closePopupWindow{

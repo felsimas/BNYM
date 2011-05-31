@@ -9,9 +9,11 @@
 #import "ScrollViewWithPagingViewController.h"
 #import "SecondViewController.h"
 #import "SecondViewController1.h"
+#import "SecondViewController2.h"
+
 #import "CustomTabBarItem.h"
 
-static NSUInteger kNumberOfPages = 2;
+static NSUInteger kNumberOfPages = 3;
 
 @interface ScrollViewWithPagingViewController (PrivateMethods)
 
@@ -108,8 +110,15 @@ static NSUInteger kNumberOfPages = 2;
             [viewControllers replaceObjectAtIndex:page withObject:controller];
             [controller release];
         }
-    }else{
+    }
+    else if(page==1){
         controller = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+        [viewControllers replaceObjectAtIndex:page withObject:controller];
+        [controller release];
+
+    }
+    else{
+        controller = [[SecondViewController2 alloc] initWithNibName:@"SecondViewController2" bundle:nil];
         [viewControllers replaceObjectAtIndex:page withObject:controller];
         [controller release];
     }

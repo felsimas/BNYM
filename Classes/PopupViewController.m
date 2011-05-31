@@ -40,8 +40,6 @@
     [button setBackgroundImage:image forState:UIControlStateNormal];
     [button addTarget:self action:@selector(playVideoFullScreen:) forControlEvents:UIControlEventTouchUpInside];
     
-    
-    
     [self.movieView addSubview: button]; 
 
     

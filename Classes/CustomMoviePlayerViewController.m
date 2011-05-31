@@ -104,6 +104,7 @@
 *--------------------------------------------------------------------------*/
 - (void) readyPlayer
 {
+    NSLog(@"ready");
  	mp =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
 
   if ([mp respondsToSelector:@selector(loadState)]) 
