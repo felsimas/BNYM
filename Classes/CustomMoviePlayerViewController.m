@@ -29,7 +29,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
+    //return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
 }
 
 /*---------------------------------------------------------------------------
@@ -49,12 +49,12 @@
 
     // When tapping movie, status bar will appear, it shows up
     // in portrait mode by default. Set orientation to landscape
-    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:NO];
+   // [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:NO];
 
 		// Rotate the view for landscape playback
 	  [[self view] setBounds:CGRectMake(0, 0, 1024, 768)];
 		//[[self view] setCenter:CGPointMake(1024/2, 768/2)];
-		[[self view] setTransform:CGAffineTransformMakeRotation(M_PI / 2)]; 
+		//[[self view] setTransform:CGAffineTransformMakeRotation(M_PI / 2)]; 
 
 		// Set frame of movieplayer
 		[[mp view] setFrame:CGRectMake(0, 0, 1024, 768)];
