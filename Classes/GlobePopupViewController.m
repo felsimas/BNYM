@@ -27,9 +27,7 @@
 	
 	backgroundView.alpha = 1;
     self.movieView.alpha = 0;
-
     [self addMovieView];
-    
     
 	[UIView setAnimationDelay:.25];
 	//webView.alpha = 1;
@@ -37,7 +35,7 @@
 	currentScreen = 1;
 	[UIView commitAnimations];	
     [currentScreenView setImage:[UIImage imageNamed:@"popup1.png"]]; 
-
+    
 }
 
 - (void)playVideoFullScreen:(id)sender{

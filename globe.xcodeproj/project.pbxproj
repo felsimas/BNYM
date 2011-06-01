@@ -37,6 +37,7 @@
 		0140720613948EA0006C306E /* SecondViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0140720413948EA0006C306E /* SecondViewController2.m */; };
 		0140720713948EA0006C306E /* SecondViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0140720513948EA0006C306E /* SecondViewController2.xib */; };
 		015F26071395EF42002661F9 /* BNY_Mellon_Hang_Glider.mov in Resources */ = {isa = PBXBuildFile; fileRef = 015F26061395EF42002661F9 /* BNY_Mellon_Hang_Glider.mov */; };
+		015F260A1395F209002661F9 /* darkBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 015F26091395F209002661F9 /* darkBackground.png */; };
 		016C3E741394927E009918C3 /* logoDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 016C3E731394927E009918C3 /* logoDark.png */; };
 		0185B53A139478E600D87816 /* GlobePopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0185B538139478E600D87816 /* GlobePopupViewController.m */; };
 		0185B53B139478E600D87816 /* GlobePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0185B539139478E600D87816 /* GlobePopupViewController.xib */; };
@@ -169,6 +170,7 @@
 		0140720413948EA0006C306E /* SecondViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController2.m; sourceTree = "<group>"; };
 		0140720513948EA0006C306E /* SecondViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController2.xib; sourceTree = "<group>"; };
 		015F26061395EF42002661F9 /* BNY_Mellon_Hang_Glider.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BNY_Mellon_Hang_Glider.mov; sourceTree = "<group>"; };
+		015F26091395F209002661F9 /* darkBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darkBackground.png; sourceTree = "<group>"; };
 		016C3E731394927E009918C3 /* logoDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoDark.png; sourceTree = "<group>"; };
 		0185B537139478E600D87816 /* GlobePopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobePopupViewController.h; sourceTree = "<group>"; };
 		0185B538139478E600D87816 /* GlobePopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobePopupViewController.m; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 		8D22EEB80FBEF0420068ABFA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				015F26091395F209002661F9 /* darkBackground.png */,
 				015F26061395EF42002661F9 /* BNY_Mellon_Hang_Glider.mov */,
 				01D0D5A21395DF64003BBFA5 /* bnym.pdf */,
 				016C3E731394927E009918C3 /* logoDark.png */,
@@ -834,6 +837,7 @@
 				01D0D5A31395DF64003BBFA5 /* bnym.pdf in Resources */,
 				01D0D5B11395E22D003BBFA5 /* PdfView.xib in Resources */,
 				015F26071395EF42002661F9 /* BNY_Mellon_Hang_Glider.mov in Resources */,
+				015F260A1395F209002661F9 /* darkBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

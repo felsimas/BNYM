@@ -161,7 +161,8 @@ static GLfloat flippedNormals[500*3];
         
 		[self initGlobeSizeByOrientation:self.parentVC.interfaceOrientation];
 		
-		
+        [self loadTexture: 0 Name: @"darkBackground.png"];
+
         
 		//texture 0 is the stars
         //  [self loadTexture: 0 Name: @"Stars"];

@@ -93,6 +93,7 @@
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
 -(IBAction)popPdf{
 	
     //[self.delegate popPdf];
