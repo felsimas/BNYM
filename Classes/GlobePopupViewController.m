@@ -2,7 +2,7 @@
 
 #import "GlobePopupViewController.h"
 #import "CustomMoviePlayerViewController.h"
-
+#import "PdfViewController.h"
 
 @implementation GlobePopupViewController
 
@@ -10,6 +10,8 @@
 @synthesize moviePlayer;
 @synthesize movieView;
 @synthesize player;
+@synthesize pdfView;
+@synthesize delegate;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -48,11 +50,35 @@
     [self.player play]; 
 }
 
+-(IBAction)popPdf{
+	    
+	//NSLog(@"pdf");
+	/*if (self.pdfView == nil){
+		NSLog(@"pdfView nulo");
+        PdfViewController *view2 = [[PdfViewController alloc] initWithNibName:@"PdfView" bundle:[NSBundle mainBundle]];
+        self.pdfView = view2;
+	}*/
+	//[self pushViewController:self.pdfView animated:YES];
+
+	[self.delegate popPdf];
+    
+	
+    /*PdfViewController *view2 = [[PdfViewController alloc] initWithNibName:@"PdfView" bundle:[NSBundle mainBundle]];
+	//[self setView:[view2 view]];
+    
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:view2];
+    [self presentModalViewController:navigationController animated:YES];
+	
+	//[navigationController release];
+    [view2 release]; */
+	
+}	
 
 -(NSURL *)movieURL
 {
 	int num = 1;
-	NSString *itemUrl = @"BNYM Hang Glider_720_h264";
+	NSString *itemUrl = @"BNY_Mellon_Hang_Glider";
 	
 	NSBundle *bundle = [NSBundle mainBundle];
 	NSString *moviePath = [bundle pathForResource:itemUrl ofType:@"mov"];
@@ -169,6 +195,8 @@
 
 - (void)dealloc {
     [moviePlayer release];
+    [delegate release];
+    [pdfView release];
     [player release];
     [movieView release];
     [super dealloc];

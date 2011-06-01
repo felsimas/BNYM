@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MPMoviePlayerController.h>
+#import "GlobePopupViewController.h"
+#import "PdfViewController.h"
+
 @class CustomMoviePlayerViewController;
 @class PopupViewController;
 
+@protocol PopUpViewPDFDelegate <NSObject>
+
+- (void)popPdf;
+
+@end
 
 @interface GlobePopupViewController : UIViewController {
     
@@ -21,9 +29,12 @@
     CustomMoviePlayerViewController *moviePlayer;
 	UIView *movieView;
     MPMoviePlayerController *player;
-
+	PdfViewController *pdfView;
+    id<PopUpViewPDFDelegate> *delegate;
 }
 
+@property (nonatomic, assign) id<PopUpViewPDFDelegate> *delegate;
+@property (nonatomic, assign) PdfViewController *pdfView;
 @property (nonatomic, assign) MPMoviePlayerController *player;
 
 @property (nonatomic, assign) int currentScreen;
@@ -32,6 +43,7 @@
 
 -(IBAction) dismiss;
 -(IBAction) nextScreen;
+-(IBAction) popPdf;
 - (void)addMovie;
 
 @end

@@ -4,6 +4,7 @@
 #import "WorldViewController.h"
 #import "CustomTabBarItem.h"
 #import "globeAppDelegate.h"
+#import "PDFExampleViewController.h"
 
 @implementation UINavigationBar (CustomImage)
 - (void)drawRect:(CGRect)rect {
@@ -92,10 +93,40 @@
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(IBAction)popPdf{
+	
+    //[self.delegate popPdf];
+    
+//	NSLog(@"WORLD VIEW COntroller pdf");
+	/*if (self.pdfView == nil){
+     NSLog(@"pdfView nulo");
+     PdfViewController *view2 = [[PdfViewController alloc] initWithNibName:@"PdfView" bundle:[NSBundle mainBundle]];
+     self.pdfView = view2;
+     }*/
+	//[self pushViewController:self.pdfView animated:YES];
+    
+	
+	//PdfViewController *view2 = [[PdfViewController alloc] initWithNibName:@"PdfView" bundle:[NSBundle mainBundle]];
+	//[self setView:[view2 view]];
+    
+    PDFExampleViewController *viewController = [[[PDFExampleViewController alloc] init] autorelease];
+
+    [self.navigationController pushViewController:viewController animated:YES];
+    
+   // UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:view2];
+    //self presentModalViewController:view2 animated:YES];
+	
+	//[navigationController release];
+    //[view2 release];
+	
+}
+
+
 - (void)launchPopupFromGlobe{
 	GlobePopupViewController *controller =
     [[GlobePopupViewController alloc] initWithNibName:@"GlobePopupViewController" 
                                             bundle:nil];
+    controller.delegate = self;
 	[self.view addSubview:controller.view];
     [GlobePopupViewController release];
 }

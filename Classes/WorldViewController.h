@@ -9,7 +9,7 @@
 #import "GlobePopupViewController.h"
 #import "TwitterAuthController.h"
 
-@interface WorldViewController : UIViewController <DDKTabBarDelegate, ChaptersMenuController,DismissPopDelegate>{
+@interface WorldViewController : UIViewController <DDKTabBarDelegate, ChaptersMenuController,DismissPopDelegate, PopUpViewPDFDelegate>{
 	UIActivityIndicatorView *activityIndicator;
 	
 	IBOutlet UISegmentedControl *countriesSegment;
@@ -17,7 +17,7 @@
 	IBOutlet UISegmentedControl *rotateSegment;
 	
 	IBOutlet EAGLView *theGlobe;
-    
+    GlobePopupViewController *controller;
     ChaptersMenuController *_chaptersPicker;
     UIPopoverController *_chaptersPickerPopover;
 }

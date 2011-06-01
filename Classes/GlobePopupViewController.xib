@@ -59,7 +59,7 @@
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">popup4.png</string>
+									<string key="NSResourceName">popup3.png</string>
 								</object>
 							</object>
 							<object class="IBUIButton" id="998417955">
@@ -139,7 +139,7 @@
 								<string key="NSFrame">{{290, 176}, {581, 328}}</string>
 								<reference key="NSSuperview" ref="326511859"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="735102846"/>
+								<reference key="NSNextKeyView" ref="871382740"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
@@ -164,6 +164,25 @@
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">logoDark.png</string>
 								</object>
+							</object>
+							<object class="IBUIButton" id="871382740">
+								<reference key="NSNextResponder" ref="326511859"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{812, 445}, {101, 110}}</string>
+								<reference key="NSSuperview" ref="326511859"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="735102846"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<reference key="IBUIFont" ref="570230463"/>
+								<reference key="IBUIHighlightedTitleColor" ref="198465760"/>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								</object>
+								<reference key="IBUINormalTitleShadowColor" ref="447878712"/>
 							</object>
 						</object>
 						<string key="NSFrameSize">{1024, 748}</string>
@@ -259,6 +278,15 @@
 					</object>
 					<int key="connectionID">30</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">popPdf</string>
+						<reference key="source" ref="871382740"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">33</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -300,6 +328,7 @@
 							<reference ref="325767986"/>
 							<reference ref="238522649"/>
 							<reference ref="735102846"/>
+							<reference ref="871382740"/>
 						</object>
 						<reference key="parent" ref="766721923"/>
 					</object>
@@ -333,6 +362,11 @@
 						<reference key="object" ref="325767986"/>
 						<reference key="parent" ref="326511859"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">32</int>
+						<reference key="object" ref="871382740"/>
+						<reference key="parent" ref="326511859"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -350,6 +384,7 @@
 					<string>26.IBPluginDependency</string>
 					<string>29.IBPluginDependency</string>
 					<string>31.IBPluginDependency</string>
+					<string>32.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -358,6 +393,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{353, 156}, {1024, 768}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -378,7 +414,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">31</int>
+			<int key="maxID">33</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -392,9 +428,11 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>dismiss</string>
 							<string>nextScreen</string>
+							<string>popPdf</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -405,6 +443,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>dismiss</string>
 							<string>nextScreen</string>
+							<string>popPdf</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -414,6 +453,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">nextScreen</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">popPdf</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>
@@ -485,7 +528,7 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>btn_window_popup_close.png</string>
 				<string>logoDark.png</string>
-				<string>popup4.png</string>
+				<string>popup3.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>

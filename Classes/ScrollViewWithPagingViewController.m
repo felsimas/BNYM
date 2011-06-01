@@ -112,13 +112,13 @@ static NSUInteger kNumberOfPages = 3;
         }
     }
     else if(page==1){
-        controller = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+        controller = [[SecondViewController2 alloc] initWithNibName:@"SecondViewController2" bundle:nil];
         [viewControllers replaceObjectAtIndex:page withObject:controller];
         [controller release];
 
     }
     else{
-        controller = [[SecondViewController2 alloc] initWithNibName:@"SecondViewController2" bundle:nil];
+        controller = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
         [viewControllers replaceObjectAtIndex:page withObject:controller];
         [controller release];
     }
