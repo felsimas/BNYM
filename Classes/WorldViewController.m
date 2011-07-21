@@ -90,7 +90,7 @@
 - (void)viewDidLoad {
     NSLog(@"Call Web Service 1");
     responseData = [[NSMutableData data] retain];
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://tudoporaqui.com.br/globe/globe.php"]];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://tudoporaqui.com.br/globe/GetPresentation.php?id=1"]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
     NSLog(@"Call Web Service 2");
     UIToolbar *tools = [[UIToolbar alloc]
