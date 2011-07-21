@@ -174,9 +174,7 @@ static GLfloat flippedNormals[500*3];
         //texture 3 & 4 are the left and right sides of the world without the countries
         //[self loadTexture: 3 Name: @"PlainGlobe_Left"];
         //[self loadTexture: 4 Name: @"PlainGlobe_Right"];
-        
-        
-		
+
         animationInterval = 1.0 / 60.0;
 		
 		smoothRotator = [[SmoothRotator alloc] init];
@@ -186,10 +184,10 @@ static GLfloat flippedNormals[500*3];
 		//this function initializes The list used for the talk bubble effect
 		totalCoordinates = 0;
 		[self initializeTheMarkerList];
-        
+        	NSLog(@"3");
         //This is setting the default marker effect.
 		[self setGlobeMarkerRenderEffect: pin]; 
-        
+        	NSLog(@"4");
 		
 		//these three variables for to let the globe continue to rotate after a uses ends their touch
 		touchMomentum = NO;
@@ -205,7 +203,7 @@ static GLfloat flippedNormals[500*3];
 		
 		self.exclusiveTouch = YES;
 		[self startAnimation];
-        
+        	NSLog(@"5");
 		//for demo globe
 		mapSwapState = map;
 		showMarkers = YES;
@@ -230,8 +228,8 @@ static GLfloat flippedNormals[500*3];
 		}
 		[self getAsingleMarker];
 		[self lookAtMarker:theCurrentMarker];
-        
-        
+        	NSLog(@"6");
+     
 		//end for demo globe
     }
     return self;
@@ -273,20 +271,6 @@ static GLfloat flippedNormals[500*3];
 - (void) initializeTheMarkerList{
 	//This code is to draw the markers on the globe
 	theMarkerList = [[MarkersForGlobeList alloc] init];
-	
-	NSLog(@"Marker list count = %d", [theMarkerList.theList count]);
-	int i;
-	GlobeMarker *aTempMarker;
-	
-	//This loop addes the markers to the globe list
-	for( i = 0; i < [theMarkerList.theList count];i++)
-	{
-		aTempMarker = [theMarkerList.theList objectAtIndex:i];
-		
-		//This line creates the marker
-		[self addGlobeMarker:aTempMarker];
-	}
-	theClosestMarker = nil;
 }
 
 //Add a marker at latitude lat and longitude lon
@@ -1292,7 +1276,20 @@ static GLfloat flippedNormals[500*3];
 	//NSString *lon;
 	//lat = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
 	//lon = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
+    NSLog(@"Marker list count = %d", [theMarkerList.theList count]);
+	int i;
+	GlobeMarker *aTempMarker;
 	
+	//This loop addes the markers to the globe list
+	for( i = 0; i < [theMarkerList.theList count];i++)
+	{
+		aTempMarker = [theMarkerList.theList objectAtIndex:i];
+		
+		//This line creates the marker
+		[self addGlobeMarker:aTempMarker];
+	}
+	theClosestMarker = nil;
+    
 	NSLog(@"Got here :: didUpdateToLocation");
 	[manager stopUpdatingLocation];
 	

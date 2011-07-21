@@ -20,6 +20,8 @@
     GlobePopupViewController *controller;
     ChaptersMenuController *_chaptersPicker;
     UIPopoverController *_chaptersPickerPopover;
+    
+    NSMutableData *responseData;
 }
 
 @property (nonatomic, retain) ChaptersMenuController *chaptersPicker;

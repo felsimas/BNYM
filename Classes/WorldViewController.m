@@ -24,9 +24,75 @@
 	//[activityIndicator stopAnimating];
 }
 
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+	[responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+	[responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	[connection release];
+    
+    NSLog(@"Got Web Service 1");
+    
+	NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+	[responseData release];
+    
+    NSLog(responseString);
+    
+    NSDictionary *dictionary = [responseString JSONValue];
+    NSInteger total = [dictionary count];
+    NSInteger ix;
+    
+    NSLog(@"xcontador: %d",total);
+    
+    for( ix = 1; ix <= total;ix++)
+	{
+        NSString *stri;
+        stri = [NSString stringWithFormat:@"%d",ix];
+        
+        NSDictionary *users = [dictionary objectForKey: stri];
+        NSString *latitudefile;
+        NSString *longitudefile;
+        NSString *location;
+        NSString *country;
+        country = [users objectForKey:@"country"];
+        location = [users objectForKey:@"location"];
+        latitudefile = [users objectForKey:@"latitude"];
+        longitudefile = [users objectForKey:@"longitude"];
+        
+        NSLog(@"xlatitude: %@",latitudefile);
+        NSLog(@"xlongitude: %@",longitudefile);
+        
+        longitudefile = [longitudefile stringByReplacingOccurrencesOfString:@"'" withString:@""];
+        longitudefile = [longitudefile stringByReplacingOccurrencesOfString:@" " withString:@""];
+        longitudefile = [longitudefile stringByReplacingOccurrencesOfString:@"°" withString:@"."];
+        latitudefile = [latitudefile stringByReplacingOccurrencesOfString:@"'" withString:@""];
+        latitudefile = [latitudefile stringByReplacingOccurrencesOfString:@" " withString:@""];
+        latitudefile = [latitudefile stringByReplacingOccurrencesOfString:@"°" withString:@"."];
+        double flatitude = [latitudefile doubleValue];
+        double flongitude = [longitudefile doubleValue];
+      
+        
+    }
+    
+    
+    
+}
+
+
 - (void)viewDidLoad {
-    
-    
+    NSLog(@"Call Web Service 1");
+    responseData = [[NSMutableData data] retain];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://tudoporaqui.com.br/globe/globe.php"]];
+	[[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSLog(@"Call Web Service 2");
     UIToolbar *tools = [[UIToolbar alloc]
                         initWithFrame:CGRectMake(0.0f, 0.0f, 103.0f, 44.01f)]; // 44.01 shifts it up 1px for some reason
     tools.clearsContextBeforeDrawing = NO;
@@ -35,31 +101,31 @@
     // anyone know how to get it perfect?
     tools.barStyle = -1; // clear background
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:3];
-
+    
     
     
     // create a standard "add" button
     UIBarButtonItem* bi = [[UIBarButtonItem alloc]
                            initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:NULL];
-   
     
     
-   // UIView* container = [[UIView alloc] init];
+    
+    // UIView* container = [[UIView alloc] init];
     UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0,0, 100,0)];
     
     UIImage *image=[UIImage imageNamed:@"top_right1_btn.png"];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.bounds = CGRectMake( 0, 0, image.size.width, image.size.height );    
     button.frame = CGRectMake( 0, -20, image.size.width, image.size.height );    
-
+    
     [button setBackgroundImage:image forState:UIControlStateNormal];
     [button addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
-
+    
     [container addSubview:button];
     
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     [buttons addObject:barButtonItem];
-
+    
     [barButtonItem release];
     
     // create a spacer
@@ -72,10 +138,10 @@
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     button2.bounds = CGRectMake( 0, 0, image.size.width, image.size.height );    
     button2.frame = CGRectMake( 0, -20, image.size.width, image.size.height );    
-
+    
     [button2 setBackgroundImage:image2 forState:UIControlStateNormal];
     [button2 addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];    
-
+    
     UIBarButtonItem *barButtonItem2 = [[UIBarButtonItem alloc] initWithCustomView:button2];
     [buttons addObject:barButtonItem2];
     [barButtonItem2 release];
@@ -86,10 +152,10 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tools];
     [tools release];
-
-    [super viewDidLoad];
     
-	// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    [super viewDidLoad];
+
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 

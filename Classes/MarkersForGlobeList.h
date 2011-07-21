@@ -3,10 +3,17 @@
 
 #import <Foundation/Foundation.h>
 #import "GlobeMarker.h"
+#import <UIKit/UIKit.h>
+#import <SBJson/SBJson.h>
+
 
 @interface MarkersForGlobeList : NSObject {
 	NSMutableArray *theList;                 // list of markers for the globe
 	GlobeMarker *aTempMarker;             // temporary variable used while generating the main list array
+    IBOutlet UILabel *label;
+	NSMutableData *responseData;
+    NSArray *luckyNumbers;
+    NSObject *parser;
 }
 
 @property (retain) NSMutableArray *theList;  //list of markers for the globe

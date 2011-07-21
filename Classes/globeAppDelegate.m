@@ -3,7 +3,8 @@
 #import "globeAppDelegate.h"
 #import "WorldViewController.h"
 #import "SecondViewController.h"
-#import "ThirdViewController.h"
+#import "Pool.h"
+#import "Settings.h"
 #import "FourthViewController.h"
 
 #import "GTabBar.h"
@@ -25,9 +26,11 @@
 @synthesize rootViewController_globe;
 @synthesize customTab;
 @synthesize fourthViewController;
-@synthesize thirdViewController;
+@synthesize pool;
+@synthesize settings;
 @synthesize rootViewController_custom;
-@synthesize rootViewController_feedback;
+@synthesize rootViewController_pool;
+@synthesize rootViewController_settings;
 @synthesize scrollViewController;
 @synthesize rootViewController_scroll;
 
@@ -54,7 +57,9 @@
     
     rootViewController_presentation = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     
-    rootViewController_feedback = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
+    rootViewController_pool = [[Pool alloc] initWithNibName:@"Pool" bundle:nil];
+
+    rootViewController_settings = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
     
     rootViewController_custom = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil];
     
@@ -75,8 +80,11 @@
     [listOfViewControllers addObject:scrollViewController];
     
 
-    thirdViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_feedback];
-    [listOfViewControllers addObject:thirdViewController];
+    pool = [[UINavigationController alloc] initWithRootViewController:rootViewController_pool];
+    [listOfViewControllers addObject:pool];
+
+    settings = [[UINavigationController alloc] initWithRootViewController:rootViewController_settings];
+    [listOfViewControllers addObject:settings];
 
     fourthViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_custom];
 
@@ -103,7 +111,8 @@
 - (void)dealloc {
 	[window release];
     [scrollViewController release];
-    [rootViewController_feedback release];
+    [rootViewController_pool release];
+    [rootViewController_settings release];
     [rootViewController_scroll release];
     [rootViewController_custom release];
     [rootViewController_globe release];
