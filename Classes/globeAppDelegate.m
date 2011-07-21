@@ -26,8 +26,8 @@
 @synthesize rootViewController_globe;
 @synthesize customTab;
 @synthesize fourthViewController;
-@synthesize pool;
-@synthesize settings;
+//@synthesize pool;
+//@synthesize settings;
 @synthesize rootViewController_custom;
 @synthesize rootViewController_pool;
 @synthesize rootViewController_settings;
@@ -57,9 +57,9 @@
     
     rootViewController_presentation = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     
-    rootViewController_pool = [[Pool alloc] initWithNibName:@"Pool" bundle:nil];
+    //rootViewController_pool = [[Pool alloc] initWithNibName:@"Pool" bundle:nil];
 
-    rootViewController_settings = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
+    //rootViewController_settings = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
     
     rootViewController_custom = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil];
     
@@ -80,11 +80,11 @@
     [listOfViewControllers addObject:scrollViewController];
     
 
-    pool = [[UINavigationController alloc] initWithRootViewController:rootViewController_pool];
-    [listOfViewControllers addObject:pool];
+    //pool = [[UINavigationController alloc] initWithRootViewController:rootViewController_pool];
+    //[listOfViewControllers addObject:pool];
 
-    settings = [[UINavigationController alloc] initWithRootViewController:rootViewController_settings];
-    [listOfViewControllers addObject:settings];
+    //settings = [[UINavigationController alloc] initWithRootViewController:rootViewController_settings];
+    //[listOfViewControllers addObject:settings];
 
     fourthViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_custom];
 
