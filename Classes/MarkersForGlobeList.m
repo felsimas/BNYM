@@ -73,7 +73,6 @@
         [self addGlobeMarker:  flatitude  theLongitude:   flongitude  locationName: location];
         
     }
-    [self addGlobeMarker:  22  theLongitude:   11  locationName: @"°"];
     
 }
 
@@ -103,7 +102,7 @@
 
 -(void)generateTheList{	
     responseData = [[NSMutableData data] retain];
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://tudoporaqui.com.br/globe/globe.php"]];
+	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://tudoporaqui.com.br/globe/GetPresentation.php?id=1"]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     [self addGlobeMarker:  0  theLongitude:   0  locationName:@""];
