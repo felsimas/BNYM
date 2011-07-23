@@ -3,7 +3,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FourthViewController : UIViewController {
+@interface BlankViewController : UIViewController {
     
 }
 

@@ -6,8 +6,7 @@
 //  Url: http://ykyuen.wordpress.com/2010/05/22/iphone-uiscrollview-with-paging-example/
 //
 
-#import "ScrollViewWithPagingViewController.h"
-#import "SecondViewController.h"
+#import "OrbViewController.h"
 #import "SecondViewController1.h"
 #import "SecondViewController2.h"
 
@@ -15,14 +14,14 @@
 
 static NSUInteger kNumberOfPages = 3;
 
-@interface ScrollViewWithPagingViewController (PrivateMethods)
+@interface OrbViewController (PrivateMethods)
 
 - (void)loadScrollViewWithPage:(int)page;
 - (void)scrollViewDidScroll:(UIScrollView *)sender;
 
 @end
 
-@implementation ScrollViewWithPagingViewController
+@implementation OrbViewController
 
 @synthesize scrollView, viewControllers;
 
@@ -53,7 +52,7 @@ static NSUInteger kNumberOfPages = 3;
     if (self) {
         
         CustomTabBarItem *tabItem = [[CustomTabBarItem alloc]
-                                     initWithTitle:@"Presentation" image:nil tag:0];
+                                     initWithTitle:@"Orb" image:nil tag:0];
         
         tabItem.customHighlightedImage=[UIImage imageNamed:@"tabIconSelected.png"];
         tabItem.customStdImage=[UIImage imageNamed:@"tabIcon.png"];       
@@ -102,35 +101,35 @@ static NSUInteger kNumberOfPages = 3;
     if (page >= kNumberOfPages) return;
 	
     // replace the placeholder if necessary
-    SecondViewController *controller = [viewControllers objectAtIndex:page];
+    //SecondViewController *controller = [viewControllers objectAtIndex:page];
 
-    if (page==0){
-        if ((NSNull *)controller == [NSNull null]) {
-            controller = [[SecondViewController1 alloc] initWithNibName:@"SecondViewController1" bundle:nil];
-            [viewControllers replaceObjectAtIndex:page withObject:controller];
-            [controller release];
-        }
-    }
-    else if(page==1){
-        controller = [[SecondViewController2 alloc] initWithNibName:@"SecondViewController2" bundle:nil];
-        [viewControllers replaceObjectAtIndex:page withObject:controller];
-        [controller release];
+    //if (page==0){
+    //    if ((NSNull *)controller == [NSNull null]) {
+    //        controller = [[SecondViewController1 alloc] initWithNibName:@"SecondViewController1" bundle:nil];
+   //         [viewControllers replaceObjectAtIndex:page withObject:controller];
+   //         [controller release];
+   //     }
+   // }
+  //  else if(page==1){
+   //     controller = [[SecondViewController2 alloc] initWithNibName:@"SecondViewController2" bundle:nil];
+   //     [viewControllers replaceObjectAtIndex:page withObject:controller];
+    //    [controller release];
 
-    }
-    else{
-        controller = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-        [viewControllers replaceObjectAtIndex:page withObject:controller];
-        [controller release];
-    }
+    //}
+    //else{
+    //    controller = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    //    [viewControllers replaceObjectAtIndex:page withObject:controller];
+    //    [controller release];
+    //}
 	
     // add the controller's view to the scroll view
-    if (nil == controller.view.superview) {
-        CGRect frame = scrollView.frame;
-        frame.origin.x = frame.size.width * page;
-        frame.origin.y = 0;
-        controller.view.frame = frame;
-        [scrollView addSubview:controller.view];
-    }
+  //  if (nil == controller.view.superview) {
+   //     CGRect frame = scrollView.frame;
+   //     frame.origin.x = frame.size.width * page;
+   //     frame.origin.y = 0;
+   //     controller.view.frame = frame;
+   //     [scrollView addSubview:controller.view];
+   // }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {

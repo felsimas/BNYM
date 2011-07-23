@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScrollViewWithPagingViewController : UIViewController <UIScrollViewDelegate> {
+@interface OrbViewController : UIViewController <UIScrollViewDelegate> {
 	UIScrollView *scrollView;
 	UIPageControl *pageControl;
     NSMutableArray *viewControllers;

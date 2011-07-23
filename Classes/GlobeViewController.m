@@ -1,7 +1,7 @@
 //  Copyright 2011 Logic Diner. All rights reserved.
 
 
-#import "WorldViewController.h"
+#import "GlobeViewController.h"
 #import "CustomTabBarItem.h"
 #import "globeAppDelegate.h"
 #import "PDFExampleViewController.h"
@@ -14,7 +14,7 @@
 @end
 
 
-@implementation WorldViewController
+@implementation GlobeViewController
 
 @synthesize chaptersPicker = _chaptersPicker;
 @synthesize chaptersPickerPopover = _chaptersPickerPopover;

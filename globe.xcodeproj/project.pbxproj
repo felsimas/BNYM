@@ -17,7 +17,7 @@
 		01160C5C137BCC2C00C49B3B /* GTabTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 01160C5A137BCC2C00C49B3B /* GTabTabItem.m */; };
 		0118DAB8137BAB49000FFAFD /* logo_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0118DAB7137BAB49000FFAFD /* logo_arrow.png */; };
 		0118DABA137BB682000FFAFD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0118DAB9137BB682000FFAFD /* Default.png */; };
-		0118DAC6137BBE55000FFAFD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118DAC4137BBE54000FFAFD /* SecondViewController.m */; };
+		0118DAC6137BBE55000FFAFD /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0118DAC4137BBE54000FFAFD /* PresentationViewController.m */; };
 		0118DAC9137BC226000FFAFD /* TBBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0118DAC8137BC226000FFAFD /* TBBackground.png */; };
 		0118DAF1137BC524000FFAFD /* navigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0118DAF0137BC524000FFAFD /* navigationBar.png */; };
 		011DCDDA1394727200E24698 /* popup1.png in Resources */ = {isa = PBXBuildFile; fileRef = 011DCDD61394727200E24698 /* popup1.png */; };
@@ -43,14 +43,13 @@
 		0185B53B139478E600D87816 /* GlobePopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0185B539139478E600D87816 /* GlobePopupViewController.xib */; };
 		0185B53E1394790900D87816 /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0185B53D1394790900D87816 /* PopupViewController.m */; };
 		0185B54013947F9A00D87816 /* videoThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 0185B53F13947F9A00D87816 /* videoThumb.png */; };
-		01A54D941389EE6E008AF732 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54D921389EE6C008AF732 /* FirstView.xib */; };
 		01A54D951389EE6E008AF732 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54D931389EE6D008AF732 /* SecondView.xib */; };
 		01A54D991389EE77008AF732 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A54D981389EE77008AF732 /* FirstViewController.m */; };
 		01A54DA41389F4A9008AF732 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A54DA31389F4A8008AF732 /* CustomTabBar.m */; };
 		01A54DB71389F6A7008AF732 /* CustomTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A54DB51389F6A5008AF732 /* CustomTabBarItem.m */; };
 		01A54DB81389F6A7008AF732 /* CustomTabBarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DB61389F6A6008AF732 /* CustomTabBarItem.xib */; };
 		01A54DC21389FC82008AF732 /* presentation_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DC11389FC82008AF732 /* presentation_tab.png */; };
-		01A54DCB138A1793008AF732 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A54DC9138A1790008AF732 /* FourthViewController.m */; };
+		01A54DCB138A1793008AF732 /* BlankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A54DC9138A1790008AF732 /* BlankViewController.m */; };
 		01A54DD7138A1ADB008AF732 /* popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DD6138A1ADA008AF732 /* popup.png */; };
 		01A54DD9138A1BB5008AF732 /* ViewWithPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DD8138A1BB4008AF732 /* ViewWithPicker.xib */; };
 		01A54DDF138A2390008AF732 /* top_right1_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DDD138A2390008AF732 /* top_right1_btn.png */; };
@@ -59,9 +58,8 @@
 		01A54DEF138A3A3F008AF732 /* view_poll.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DEC138A3A3E008AF732 /* view_poll.png */; };
 		01A54DF0138A3A3F008AF732 /* view_presentation.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DED138A3A3F008AF732 /* view_presentation.png */; };
 		01A54DF1138A3A3F008AF732 /* view_workbench.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DEE138A3A3F008AF732 /* view_workbench.png */; };
-		01A54DF8138A3B46008AF732 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DF6138A3B44008AF732 /* SecondViewController.xib */; };
-		01A54DFD138A3C8A008AF732 /* Pool.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DFB138A3C88008AF732 /* Pool.xib */; };
-		01A54E02138A3D67008AF732 /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54E00138A3D66008AF732 /* FourthViewController.xib */; };
+		01A54DFD138A3C8A008AF732 /* PollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54DFB138A3C88008AF732 /* PollViewController.xib */; };
+		01A54E02138A3D67008AF732 /* BlankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54E00138A3D66008AF732 /* BlankViewController.xib */; };
 		01A54E04138A46E0008AF732 /* btn_more_on_this.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54E03138A46E0008AF732 /* btn_more_on_this.png */; };
 		01A54E12138A486E008AF732 /* TwitterAuthController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A54E11138A486C008AF732 /* TwitterAuthController_iPad.xib */; };
 		01A54E14138A48AF008AF732 /* closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54E13138A48AE008AF732 /* closeButton.png */; };
@@ -69,8 +67,8 @@
 		01A54E19138A49BD008AF732 /* popupContent.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54E18138A49BC008AF732 /* popupContent.png */; };
 		01A54E1B138A4DEC008AF732 /* btn_window_popup_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54E1A138A4DEB008AF732 /* btn_window_popup_close.png */; };
 		01A54E1D138A583E008AF732 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01A54E1C138A583E008AF732 /* Entitlements.plist */; };
-		01B4F957138B63F50034ECC3 /* ScrollViewWithPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4F955138B63F50034ECC3 /* ScrollViewWithPagingViewController.m */; };
-		01B4F958138B63F50034ECC3 /* ScrollViewWithPagingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B4F956138B63F50034ECC3 /* ScrollViewWithPagingViewController.xib */; };
+		01B4F957138B63F50034ECC3 /* OrbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4F955138B63F50034ECC3 /* OrbViewController.m */; };
+		01B4F958138B63F50034ECC3 /* OrbViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B4F956138B63F50034ECC3 /* OrbViewController.xib */; };
 		01B4F95D138B67ED0034ECC3 /* SecondViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B4F95B138B67EC0034ECC3 /* SecondViewController1.m */; };
 		01B4F95E138B67ED0034ECC3 /* SecondViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B4F95C138B67EC0034ECC3 /* SecondViewController1.xib */; };
 		01B4F960138B68960034ECC3 /* view_presentation1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B4F95F138B68960034ECC3 /* view_presentation1.png */; };
@@ -80,14 +78,16 @@
 		1D3623260D0F684500981E51 /* globeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* globeAppDelegate.m */; };
 		38B84F0113BF7A54001C24A1 /* SBJson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B84F0013BF7A54001C24A1 /* SBJson.framework */; };
 		38C9C96313D9013D00589AFA /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C9C95F13D9013C00589AFA /* Settings.m */; };
-		38C9C96413D9013D00589AFA /* Pool.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C9C96113D9013D00589AFA /* Pool.m */; };
+		38C9C96413D9013D00589AFA /* PollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C9C96113D9013D00589AFA /* PollViewController.m */; };
 		38D3BFCB13D9192500AC9E58 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D3BFC213D9192500AC9E58 /* NSObject+SBJSON.m */; };
 		38D3BFCC13D9192500AC9E58 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D3BFC413D9192500AC9E58 /* NSString+SBJSON.m */; };
 		38D3BFCD13D9192500AC9E58 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D3BFC613D9192500AC9E58 /* SBJsonBase.m */; };
 		38D3BFCE13D9192500AC9E58 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D3BFC813D9192500AC9E58 /* SBJsonParser.m */; };
 		38D3BFCF13D9192500AC9E58 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D3BFCA13D9192500AC9E58 /* SBJsonWriter.m */; };
 		38D3BFD213D91B3D00AC9E58 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38D3BFD013D91B3D00AC9E58 /* Model.xcdatamodeld */; };
-		38D3BFD613D92FE000AC9E58 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D3BFD513D92FE000AC9E58 /* Settings.xib */; };
+		38D3BFD813DA774300AC9E58 /* PresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D3BFD713DA774100AC9E58 /* PresentationViewController.xib */; };
+		38D3BFE613DA857000AC9E58 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D3BFE513DA856F00AC9E58 /* TestView.xib */; };
+		38D3BFEA13DA8D0A00AC9E58 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D3BFE913DA8D0900AC9E58 /* SettingsViewController.xib */; };
 		5E61A98C0FC3D9BF006F93FA /* SmoothRotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E61A98B0FC3D9BF006F93FA /* SmoothRotator.m */; };
 		5EBD22AE0F8D45960051C4B6 /* GlobeMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD22AD0F8D45960051C4B6 /* GlobeMarker.m */; };
 		5EECA01E0F9FC092001B93EA /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EECA01D0F9FC092001B93EA /* EAGLView.m */; };
@@ -100,7 +100,7 @@
 		8D1E905811916E9E00D6FB0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1E905711916E9E00D6FB0A /* UIKit.framework */; };
 		8D1E905C11916EAE00D6FB0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1E905B11916EAE00D6FB0A /* Foundation.framework */; };
 		8D1E906011916EB700D6FB0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1E905F11916EB700D6FB0A /* MapKit.framework */; };
-		8D22EEB40FBEF02B0068ABFA /* WorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D22EEB10FBEF02B0068ABFA /* WorldViewController.m */; };
+		8D22EEB40FBEF02B0068ABFA /* GlobeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D22EEB10FBEF02B0068ABFA /* GlobeViewController.m */; };
 		8D22EEB50FBEF02B0068ABFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D22EEB30FBEF02B0068ABFA /* main.m */; };
 		8D22EED60FBEF0420068ABFA /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D22EEC80FBEF0420068ABFA /* MainWindow.xib */; };
 		8D22EED70FBEF0420068ABFA /* World.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D22EEC90FBEF0420068ABFA /* World.xib */; };
@@ -151,8 +151,8 @@
 		01160C5A137BCC2C00C49B3B /* GTabTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTabTabItem.m; sourceTree = "<group>"; };
 		0118DAB7137BAB49000FFAFD /* logo_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_arrow.png; sourceTree = "<group>"; };
 		0118DAB9137BB682000FFAFD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		0118DAC3137BBE54000FFAFD /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		0118DAC4137BBE54000FFAFD /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		0118DAC3137BBE54000FFAFD /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
+		0118DAC4137BBE54000FFAFD /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
 		0118DAC8137BC226000FFAFD /* TBBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TBBackground.png; sourceTree = "<group>"; };
 		0118DAF0137BC524000FFAFD /* navigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationBar.png; sourceTree = "<group>"; };
 		011DCDD61394727200E24698 /* popup1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup1.png; sourceTree = "<group>"; };
@@ -187,18 +187,16 @@
 		0185B53C1394790900D87816 /* PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupViewController.h; sourceTree = "<group>"; };
 		0185B53D1394790900D87816 /* PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupViewController.m; sourceTree = "<group>"; };
 		0185B53F13947F9A00D87816 /* videoThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoThumb.png; sourceTree = "<group>"; };
-		01A54D921389EE6C008AF732 /* FirstView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstView.xib; sourceTree = "<group>"; };
 		01A54D931389EE6D008AF732 /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
 		01A54D971389EE76008AF732 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		01A54D981389EE77008AF732 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		01A54DA21389F4A7008AF732 /* CustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBar.h; sourceTree = "<group>"; };
 		01A54DA31389F4A8008AF732 /* CustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBar.m; sourceTree = "<group>"; };
-		01A54DB41389F6A4008AF732 /* CustomTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarItem.h; sourceTree = "<group>"; };
 		01A54DB51389F6A5008AF732 /* CustomTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarItem.m; sourceTree = "<group>"; };
 		01A54DB61389F6A6008AF732 /* CustomTabBarItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTabBarItem.xib; sourceTree = "<group>"; };
 		01A54DC11389FC82008AF732 /* presentation_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presentation_tab.png; sourceTree = "<group>"; };
-		01A54DC8138A1790008AF732 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
-		01A54DC9138A1790008AF732 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		01A54DC8138A1790008AF732 /* BlankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankViewController.h; sourceTree = "<group>"; };
+		01A54DC9138A1790008AF732 /* BlankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlankViewController.m; sourceTree = "<group>"; };
 		01A54DD6138A1ADA008AF732 /* popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup.png; sourceTree = "<group>"; };
 		01A54DD8138A1BB4008AF732 /* ViewWithPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewWithPicker.xib; sourceTree = "<group>"; };
 		01A54DDD138A2390008AF732 /* top_right1_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_right1_btn.png; sourceTree = "<group>"; };
@@ -208,9 +206,8 @@
 		01A54DEC138A3A3E008AF732 /* view_poll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_poll.png; sourceTree = "<group>"; };
 		01A54DED138A3A3F008AF732 /* view_presentation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_presentation.png; sourceTree = "<group>"; };
 		01A54DEE138A3A3F008AF732 /* view_workbench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_workbench.png; sourceTree = "<group>"; };
-		01A54DF6138A3B44008AF732 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
-		01A54DFB138A3C88008AF732 /* Pool.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Pool.xib; sourceTree = "<group>"; };
-		01A54E00138A3D66008AF732 /* FourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthViewController.xib; sourceTree = "<group>"; };
+		01A54DFB138A3C88008AF732 /* PollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollViewController.xib; sourceTree = "<group>"; };
+		01A54E00138A3D66008AF732 /* BlankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlankViewController.xib; sourceTree = "<group>"; };
 		01A54E03138A46E0008AF732 /* btn_more_on_this.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_more_on_this.png; sourceTree = "<group>"; };
 		01A54E11138A486C008AF732 /* TwitterAuthController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterAuthController_iPad.xib; sourceTree = "<group>"; };
 		01A54E13138A48AE008AF732 /* closeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeButton.png; sourceTree = "<group>"; };
@@ -219,9 +216,9 @@
 		01A54E18138A49BC008AF732 /* popupContent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popupContent.png; sourceTree = "<group>"; };
 		01A54E1A138A4DEB008AF732 /* btn_window_popup_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_window_popup_close.png; sourceTree = "<group>"; };
 		01A54E1C138A583E008AF732 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = ../3Dmodel/Entitlements.plist; sourceTree = "<group>"; };
-		01B4F954138B63F50034ECC3 /* ScrollViewWithPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewWithPagingViewController.h; sourceTree = "<group>"; };
-		01B4F955138B63F50034ECC3 /* ScrollViewWithPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewWithPagingViewController.m; sourceTree = "<group>"; };
-		01B4F956138B63F50034ECC3 /* ScrollViewWithPagingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollViewWithPagingViewController.xib; sourceTree = "<group>"; };
+		01B4F954138B63F50034ECC3 /* OrbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrbViewController.h; sourceTree = "<group>"; };
+		01B4F955138B63F50034ECC3 /* OrbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrbViewController.m; sourceTree = "<group>"; };
+		01B4F956138B63F50034ECC3 /* OrbViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrbViewController.xib; sourceTree = "<group>"; };
 		01B4F95A138B67EC0034ECC3 /* SecondViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController1.h; sourceTree = "<group>"; };
 		01B4F95B138B67EC0034ECC3 /* SecondViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController1.m; sourceTree = "<group>"; };
 		01B4F95C138B67EC0034ECC3 /* SecondViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController1.xib; sourceTree = "<group>"; };
@@ -236,8 +233,8 @@
 		38B84F0013BF7A54001C24A1 /* SBJson.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SBJson.framework; path = "../../Library/Developer/Xcode/DerivedData/SBJson-gyggjbnjxrjlwobiltuceotocykl/Build/Products/Debug/SBJson.framework"; sourceTree = "<group>"; };
 		38C9C95F13D9013C00589AFA /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		38C9C96013D9013C00589AFA /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
-		38C9C96113D9013D00589AFA /* Pool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pool.m; sourceTree = "<group>"; };
-		38C9C96213D9013D00589AFA /* Pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pool.h; sourceTree = "<group>"; };
+		38C9C96113D9013D00589AFA /* PollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollViewController.m; sourceTree = "<group>"; };
+		38C9C96213D9013D00589AFA /* PollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollViewController.h; sourceTree = "<group>"; };
 		38D3BFC013D9192500AC9E58 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		38D3BFC113D9192500AC9E58 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		38D3BFC213D9192500AC9E58 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -250,7 +247,10 @@
 		38D3BFC913D9192500AC9E58 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		38D3BFCA13D9192500AC9E58 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		38D3BFD113D91B3D00AC9E58 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		38D3BFD513D92FE000AC9E58 /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
+		38D3BFD713DA774100AC9E58 /* PresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentationViewController.xib; sourceTree = "<group>"; };
+		38D3BFE213DA79AC00AC9E58 /* CustomTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarItem.h; sourceTree = "<group>"; };
+		38D3BFE513DA856F00AC9E58 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestView.xib; path = globe.xcodeproj/TestView.xib; sourceTree = "<group>"; };
+		38D3BFE913DA8D0900AC9E58 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		5E61A98A0FC3D9BF006F93FA /* SmoothRotator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothRotator.h; sourceTree = "<group>"; };
 		5E61A98B0FC3D9BF006F93FA /* SmoothRotator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothRotator.m; sourceTree = "<group>"; };
 		5E8CFE180FBE1F9100B8D31E /* GlobeConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobeConstants.h; sourceTree = "<group>"; };
@@ -270,8 +270,8 @@
 		8D1E905B11916EAE00D6FB0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8D1E905F11916EB700D6FB0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8D1E906F11916EE200D6FB0A /* 3Dglobe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3Dglobe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D22EEB10FBEF02B0068ABFA /* WorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldViewController.m; sourceTree = "<group>"; };
-		8D22EEB20FBEF02B0068ABFA /* WorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldViewController.h; sourceTree = "<group>"; };
+		8D22EEB10FBEF02B0068ABFA /* GlobeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobeViewController.m; sourceTree = "<group>"; };
+		8D22EEB20FBEF02B0068ABFA /* GlobeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobeViewController.h; sourceTree = "<group>"; };
 		8D22EEB30FBEF02B0068ABFA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D22EEC60FBEF0420068ABFA /* Hemisphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hemisphere.h; sourceTree = "<group>"; };
 		8D22EEC80FBEF0420068ABFA /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -357,13 +357,15 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				38D3BFD513D92FE000AC9E58 /* Settings.xib */,
+				38D3BFE913DA8D0900AC9E58 /* SettingsViewController.xib */,
+				38D3BFE213DA79AC00AC9E58 /* CustomTabBarItem.h */,
+				38D3BFD713DA774100AC9E58 /* PresentationViewController.xib */,
 				38C9C95F13D9013C00589AFA /* Settings.m */,
 				38D3BFBF13D9192500AC9E58 /* JSON */,
 				38C9C96013D9013C00589AFA /* Settings.h */,
-				38C9C96113D9013D00589AFA /* Pool.m */,
+				38C9C96113D9013D00589AFA /* PollViewController.m */,
 				38D3BFD013D91B3D00AC9E58 /* Model.xcdatamodeld */,
-				38C9C96213D9013D00589AFA /* Pool.h */,
+				38C9C96213D9013D00589AFA /* PollViewController.h */,
 				013FBF2C1395E9D10053079E /* PDFExampleViewController.h */,
 				013FBF2D1395E9D10053079E /* PDFExampleViewController.m */,
 				013FBF2B1395E9BF0053079E /* Leaves */,
@@ -375,11 +377,10 @@
 				0185B537139478E600D87816 /* GlobePopupViewController.h */,
 				0185B538139478E600D87816 /* GlobePopupViewController.m */,
 				0185B539139478E600D87816 /* GlobePopupViewController.xib */,
+				01A54D981389EE77008AF732 /* FirstViewController.m */,
 				01324FDC138B83A10022CAA7 /* CustomMoviePlayerViewController.h */,
 				01324FDD138B83A10022CAA7 /* CustomMoviePlayerViewController.m */,
-				01A54D921389EE6C008AF732 /* FirstView.xib */,
 				01A54D971389EE76008AF732 /* FirstViewController.h */,
-				01A54D981389EE77008AF732 /* FirstViewController.m */,
 				01A54DD8138A1BB4008AF732 /* ViewWithPicker.xib */,
 				01A54D931389EE6D008AF732 /* SecondView.xib */,
 				8D9AF82911628E8200AF029C /* MapView */,
@@ -388,30 +389,29 @@
 				01A54E15138A48FC008AF732 /* TwitterAuthController.h */,
 				01A54E16138A48FE008AF732 /* TwitterAuthController.m */,
 				01A54E11138A486C008AF732 /* TwitterAuthController_iPad.xib */,
-				8D22EEB20FBEF02B0068ABFA /* WorldViewController.h */,
-				8D22EEB10FBEF02B0068ABFA /* WorldViewController.m */,
+				8D22EEB20FBEF02B0068ABFA /* GlobeViewController.h */,
+				8D22EEB10FBEF02B0068ABFA /* GlobeViewController.m */,
 				013FBF2F1395EA500053079E /* Utilities.h */,
 				013FBF301395EA500053079E /* Utilities.m */,
 				01A54DA21389F4A7008AF732 /* CustomTabBar.h */,
 				01A54DA31389F4A8008AF732 /* CustomTabBar.m */,
 				1D3623240D0F684500981E51 /* globeAppDelegate.h */,
 				1D3623250D0F684500981E51 /* globeAppDelegate.m */,
-				01A54DC8138A1790008AF732 /* FourthViewController.h */,
-				01A54DC9138A1790008AF732 /* FourthViewController.m */,
-				0118DAC3137BBE54000FFAFD /* SecondViewController.h */,
-				0118DAC4137BBE54000FFAFD /* SecondViewController.m */,
+				01A54DC8138A1790008AF732 /* BlankViewController.h */,
+				01A54DC9138A1790008AF732 /* BlankViewController.m */,
+				0118DAC3137BBE54000FFAFD /* PresentationViewController.h */,
+				0118DAC4137BBE54000FFAFD /* PresentationViewController.m */,
 				01B4F95A138B67EC0034ECC3 /* SecondViewController1.h */,
 				0140720313948EA0006C306E /* SecondViewController2.h */,
 				0140720413948EA0006C306E /* SecondViewController2.m */,
 				0140720513948EA0006C306E /* SecondViewController2.xib */,
 				01B4F95B138B67EC0034ECC3 /* SecondViewController1.m */,
 				01B4F95C138B67EC0034ECC3 /* SecondViewController1.xib */,
-				01A54DF6138A3B44008AF732 /* SecondViewController.xib */,
-				01A54DFB138A3C88008AF732 /* Pool.xib */,
-				01B4F954138B63F50034ECC3 /* ScrollViewWithPagingViewController.h */,
-				01B4F955138B63F50034ECC3 /* ScrollViewWithPagingViewController.m */,
-				01B4F956138B63F50034ECC3 /* ScrollViewWithPagingViewController.xib */,
-				01A54E00138A3D66008AF732 /* FourthViewController.xib */,
+				01A54DFB138A3C88008AF732 /* PollViewController.xib */,
+				01B4F954138B63F50034ECC3 /* OrbViewController.h */,
+				01B4F955138B63F50034ECC3 /* OrbViewController.m */,
+				01B4F956138B63F50034ECC3 /* OrbViewController.xib */,
+				01A54E00138A3D66008AF732 /* BlankViewController.xib */,
 				01160C5D137BCC3000C49B3B /* GTabBar */,
 				01A54E1C138A583E008AF732 /* Entitlements.plist */,
 				5E8CFE180FBE1F9100B8D31E /* GlobeConstants.h */,
@@ -432,7 +432,6 @@
 				01160C45137BC7CA00C49B3B /* DDKCustomTabbar.m */,
 				01160C46137BC7CA00C49B3B /* DDKCustomTabButton.h */,
 				01160C47137BC7CA00C49B3B /* DDKCustomTabButton.m */,
-				01A54DB41389F6A4008AF732 /* CustomTabBarItem.h */,
 				01A54DB51389F6A5008AF732 /* CustomTabBarItem.m */,
 				01A54DB61389F6A6008AF732 /* CustomTabBarItem.xib */,
 			);
@@ -450,6 +449,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				38D3BFE513DA856F00AC9E58 /* TestView.xib */,
 				01324FD0138B7C230022CAA7 /* MediaPlayer.framework */,
 				8D22EEC50FBEF0420068ABFA /* 3Dmodel */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -852,7 +852,6 @@
 				01160C40137BC6E100C49B3B /* tabIcon.png in Resources */,
 				01160C4C137BC87F00C49B3B /* tabIconSelected.png in Resources */,
 				01160C4E137BC8C200C49B3B /* onePixel.png in Resources */,
-				01A54D941389EE6E008AF732 /* FirstView.xib in Resources */,
 				01A54D951389EE6E008AF732 /* SecondView.xib in Resources */,
 				01A54DB81389F6A7008AF732 /* CustomTabBarItem.xib in Resources */,
 				01A54DC21389FC82008AF732 /* presentation_tab.png in Resources */,
@@ -863,16 +862,15 @@
 				01A54DEF138A3A3F008AF732 /* view_poll.png in Resources */,
 				01A54DF0138A3A3F008AF732 /* view_presentation.png in Resources */,
 				01A54DF1138A3A3F008AF732 /* view_workbench.png in Resources */,
-				01A54DF8138A3B46008AF732 /* SecondViewController.xib in Resources */,
-				01A54DFD138A3C8A008AF732 /* Pool.xib in Resources */,
-				01A54E02138A3D67008AF732 /* FourthViewController.xib in Resources */,
+				01A54DFD138A3C8A008AF732 /* PollViewController.xib in Resources */,
+				01A54E02138A3D67008AF732 /* BlankViewController.xib in Resources */,
 				01A54E04138A46E0008AF732 /* btn_more_on_this.png in Resources */,
 				01A54E12138A486E008AF732 /* TwitterAuthController_iPad.xib in Resources */,
 				01A54E14138A48AF008AF732 /* closeButton.png in Resources */,
 				01A54E19138A49BD008AF732 /* popupContent.png in Resources */,
 				01A54E1B138A4DEC008AF732 /* btn_window_popup_close.png in Resources */,
 				01A54E1D138A583E008AF732 /* Entitlements.plist in Resources */,
-				01B4F958138B63F50034ECC3 /* ScrollViewWithPagingViewController.xib in Resources */,
+				01B4F958138B63F50034ECC3 /* OrbViewController.xib in Resources */,
 				01B4F95E138B67ED0034ECC3 /* SecondViewController1.xib in Resources */,
 				01B4F960138B68960034ECC3 /* view_presentation1.png in Resources */,
 				01324FC1138B7AE60022CAA7 /* popup_video.png in Resources */,
@@ -890,7 +888,9 @@
 				01D0D5B11395E22D003BBFA5 /* PdfView.xib in Resources */,
 				015F26071395EF42002661F9 /* BNY_Mellon_Hang_Glider.mov in Resources */,
 				015F260A1395F209002661F9 /* darkBackground.png in Resources */,
-				38D3BFD613D92FE000AC9E58 /* Settings.xib in Resources */,
+				38D3BFD813DA774300AC9E58 /* PresentationViewController.xib in Resources */,
+				38D3BFE613DA857000AC9E58 /* TestView.xib in Resources */,
+				38D3BFEA13DA8D0A00AC9E58 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,14 +904,14 @@
 				1D3623260D0F684500981E51 /* globeAppDelegate.m in Sources */,
 				5EBD22AE0F8D45960051C4B6 /* GlobeMarker.m in Sources */,
 				5EECA01E0F9FC092001B93EA /* EAGLView.m in Sources */,
-				8D22EEB40FBEF02B0068ABFA /* WorldViewController.m in Sources */,
+				8D22EEB40FBEF02B0068ABFA /* GlobeViewController.m in Sources */,
 				8D22EEB50FBEF02B0068ABFA /* main.m in Sources */,
 				5E61A98C0FC3D9BF006F93FA /* SmoothRotator.m in Sources */,
 				8A2D4AAC100D414400485C1F /* MarkersForGlobeList.m in Sources */,
 				8DD88CE310D45E8D00A617D9 /* Textures.m in Sources */,
 				8D9AF82F11628E8200AF029C /* MapViewController.m in Sources */,
 				8D9AF83111628E8200AF029C /* MyAnnotation.m in Sources */,
-				0118DAC6137BBE55000FFAFD /* SecondViewController.m in Sources */,
+				0118DAC6137BBE55000FFAFD /* PresentationViewController.m in Sources */,
 				01160C48137BC7CA00C49B3B /* DDKBorderView.m in Sources */,
 				01160C49137BC7CA00C49B3B /* DDKCustomTabbar.m in Sources */,
 				01160C4A137BC7CA00C49B3B /* DDKCustomTabButton.m in Sources */,
@@ -920,10 +920,10 @@
 				01A54D991389EE77008AF732 /* FirstViewController.m in Sources */,
 				01A54DA41389F4A9008AF732 /* CustomTabBar.m in Sources */,
 				01A54DB71389F6A7008AF732 /* CustomTabBarItem.m in Sources */,
-				01A54DCB138A1793008AF732 /* FourthViewController.m in Sources */,
+				01A54DCB138A1793008AF732 /* BlankViewController.m in Sources */,
 				01A54DEB138A2B45008AF732 /* ChaptersMenuController.m in Sources */,
 				01A54E17138A4900008AF732 /* TwitterAuthController.m in Sources */,
-				01B4F957138B63F50034ECC3 /* ScrollViewWithPagingViewController.m in Sources */,
+				01B4F957138B63F50034ECC3 /* OrbViewController.m in Sources */,
 				01B4F95D138B67ED0034ECC3 /* SecondViewController1.m in Sources */,
 				01324FDE138B83A10022CAA7 /* CustomMoviePlayerViewController.m in Sources */,
 				0185B53A139478E600D87816 /* GlobePopupViewController.m in Sources */,
@@ -936,7 +936,7 @@
 				013FBF2E1395E9D10053079E /* PDFExampleViewController.m in Sources */,
 				013FBF311395EA500053079E /* Utilities.m in Sources */,
 				38C9C96313D9013D00589AFA /* Settings.m in Sources */,
-				38C9C96413D9013D00589AFA /* Pool.m in Sources */,
+				38C9C96413D9013D00589AFA /* PollViewController.m in Sources */,
 				38D3BFCB13D9192500AC9E58 /* NSObject+SBJSON.m in Sources */,
 				38D3BFCC13D9192500AC9E58 /* NSString+SBJSON.m in Sources */,
 				38D3BFCD13D9192500AC9E58 /* SBJsonBase.m in Sources */,

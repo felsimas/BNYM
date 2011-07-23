@@ -13,7 +13,7 @@
     if (self) {
         
         CustomTabBarItem *tabItem = [[CustomTabBarItem alloc]
-                                     initWithTitle:@"Presentation" image:nil tag:0];
+                                     initWithTitle:@"Orb" image:nil tag:0];
         
         tabItem.customHighlightedImage=[UIImage imageNamed:@"tabIconSelected.png"];
         tabItem.customStdImage=[UIImage imageNamed:@"tabIcon.png"];       
@@ -46,7 +46,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     
     CustomTabBarItem *tabItem = [[CustomTabBarItem alloc]
-                                 initWithTitle:@"Presentation" image:nil tag:0];
+                                 initWithTitle:@"Orb" image:nil tag:0];
     
     tabItem.customHighlightedImage=[UIImage imageNamed:@"tabIconSelected.png"];
     tabItem.customStdImage=[UIImage imageNamed:@"tabIcon.png"];       

@@ -1,15 +1,14 @@
 //  Copyright 2011 Logic Diner. All rights reserved.
 
 #import "globeAppDelegate.h"
-#import "WorldViewController.h"
-#import "SecondViewController.h"
-#import "Pool.h"
-#import "Settings.h"
-#import "FourthViewController.h"
-
 #import "GTabBar.h"
-#import "SecondViewController.h"
-#import "ScrollViewWithPagingViewController.h"
+
+#import "GlobeViewController.h"
+#import "OrbViewController.h"
+#import "PresentationViewController.h"
+#import "PollViewController.h"
+#import "SettingsViewController.h"
+#import "BlankViewController.h"
 
 @interface UITabBarController (private)
 - (UITabBar *)tabBar;
@@ -19,24 +18,26 @@
 
 @synthesize window;
 @synthesize navigationController;
-@synthesize worldViewController;
-@synthesize secondViewController;
 @synthesize tabBarController;
-@synthesize rootViewController_presentation;
-@synthesize rootViewController_globe;
 @synthesize customTab;
-@synthesize fourthViewController;
-@synthesize pool;
-@synthesize settings;
-@synthesize rootViewController_custom;
-@synthesize rootViewController_pool;
+
+@synthesize globeViewController;
+@synthesize orbViewController;
+@synthesize presentationViewController;
+@synthesize pollViewController;
+@synthesize settingsViewController;
+@synthesize blankViewController;
+
+@synthesize rootViewController_globe;
+@synthesize rootViewController_orb;
+@synthesize rootViewController_presentation;
+@synthesize rootViewController_poll;
 @synthesize rootViewController_settings;
-@synthesize scrollViewController;
-@synthesize rootViewController_scroll;
+@synthesize rootViewController_blank;
+
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 
-    
     NSMutableArray *listOfViewControllers = [[[NSMutableArray alloc]init]autorelease];
 	
     tabBarController = [[UITabBarController alloc] init];
@@ -51,44 +52,33 @@
     [[tabBarController tabBar]insertSubview:view atIndex:0];
     [view release];
 
-    
-//	WorldViewController *rootViewController2 = [[[WorldViewController alloc] init] autorelease];
-    rootViewController_globe = [[WorldViewController alloc] initWithNibName:@"World-iPad" bundle:nil];
-    
-    rootViewController_presentation = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-    
-    rootViewController_pool = [[Pool alloc] initWithNibName:@"Pool" bundle:nil];
-
-    rootViewController_settings = [[Settings alloc] initWithNibName:@"Settings" bundle:nil];
-    
-    rootViewController_custom = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil];
+    rootViewController_globe = [[GlobeViewController alloc] initWithNibName:@"World-iPad" bundle:nil]; 
+	rootViewController_orb = [[OrbViewController alloc]initWithNibName:@"OrbViewController" bundle:nil];
+    rootViewController_presentation  = [[PresentationViewController alloc] initWithNibName:@"PresentationViewController" bundle:nil];
+    rootViewController_poll = [[PollViewController alloc] initWithNibName:@"PollViewController" bundle:nil];
+    rootViewController_settings = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];    
+    rootViewController_blank = [[BlankViewController alloc] initWithNibName:@"BlankViewController" bundle:nil];  
     
 
+    globeViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_globe];
+	[listOfViewControllers addObject:globeViewController];
+	
+	orbViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_orb];
+    [listOfViewControllers addObject:orbViewController];
+
+    presentationViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_presentation];
+    [listOfViewControllers addObject:presentationViewController]; 
     
-    rootViewController_scroll = [[ScrollViewWithPagingViewController alloc]initWithNibName:@"ScrollViewWithPagingViewController" bundle:nil];
+    pollViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_poll];
+    [listOfViewControllers addObject:pollViewController];  
+
+	blankViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_blank];
+	[listOfViewControllers addObject:blankViewController];
+
+	settingsViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_settings];
+    [listOfViewControllers addObject:settingsViewController];
 
     
-    
-   worldViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_globe];
-    
-	[listOfViewControllers addObject:worldViewController];
-
-   /* secondViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_presentation];
-    [listOfViewControllers addObject:secondViewController]; */
-    
-    scrollViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_scroll];
-    [listOfViewControllers addObject:scrollViewController];
-    
-
-    pool = [[UINavigationController alloc] initWithRootViewController:rootViewController_pool];
-    [listOfViewControllers addObject:pool];
-
-    settings = [[UINavigationController alloc] initWithRootViewController:rootViewController_settings];
-    [listOfViewControllers addObject:settings];
-
-    fourthViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_custom];
-
-	[listOfViewControllers addObject:fourthViewController];
     
 
 	[self.tabBarController setViewControllers:listOfViewControllers
@@ -110,14 +100,22 @@
 
 - (void)dealloc {
 	[window release];
-    [scrollViewController release];
-    [rootViewController_pool release];
-    [rootViewController_settings release];
-    [rootViewController_scroll release];
-    [rootViewController_custom release];
-    [rootViewController_globe release];
-    [rootViewController_presentation release];
     [tabBarController release];
+    
+    [globeViewController release];
+    [orbViewController release];
+    [presentationViewController release];
+    [pollViewController release];
+    [settingsViewController release];
+    [blankViewController release];
+    
+    [rootViewController_globe release];
+    [rootViewController_orb release];
+    [rootViewController_presentation release];
+    [rootViewController_poll release];
+    [rootViewController_settings release];
+    [rootViewController_blank release];
+    
 	[super dealloc];
 }
 
