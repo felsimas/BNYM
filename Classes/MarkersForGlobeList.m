@@ -1,7 +1,6 @@
 //  Copyright 2011 Logic Diner. All rights reserved.
 
 #import "MarkersForGlobeList.h"
-#import <SBJson/SBJson.h>
 
 
 @implementation MarkersForGlobeList
@@ -36,7 +35,7 @@
 	NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	[responseData release];
     
-    NSLog(responseString);
+    
     
     NSDictionary *dictionary = [responseString JSONValue];
     NSInteger total = [dictionary count];
@@ -104,11 +103,8 @@
     responseData = [[NSMutableData data] retain];
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://tudoporaqui.com.br/globe/GetPresentation.php?id=1"]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
     [self addGlobeMarker:  0  theLongitude:   0  locationName:@""];
     
-    
-
 }
 
 //Destructor

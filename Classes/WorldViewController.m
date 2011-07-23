@@ -24,75 +24,9 @@
 	//[activityIndicator stopAnimating];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	[responseData setLength:0];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	[responseData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	[connection release];
-    
-    NSLog(@"Got Web Service 1");
-    
-	NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-	[responseData release];
-    
-    NSLog(responseString);
-    
-    NSDictionary *dictionary = [responseString JSONValue];
-    NSInteger total = [dictionary count];
-    NSInteger ix;
-    
-    NSLog(@"xcontador: %d",total);
-    
-    for( ix = 1; ix <= total;ix++)
-	{
-        NSString *stri;
-        stri = [NSString stringWithFormat:@"%d",ix];
-        
-        NSDictionary *users = [dictionary objectForKey: stri];
-        NSString *latitudefile;
-        NSString *longitudefile;
-        NSString *location;
-        NSString *country;
-        country = [users objectForKey:@"country"];
-        location = [users objectForKey:@"location"];
-        latitudefile = [users objectForKey:@"latitude"];
-        longitudefile = [users objectForKey:@"longitude"];
-        
-        NSLog(@"xlatitude: %@",latitudefile);
-        NSLog(@"xlongitude: %@",longitudefile);
-        
-        longitudefile = [longitudefile stringByReplacingOccurrencesOfString:@"'" withString:@""];
-        longitudefile = [longitudefile stringByReplacingOccurrencesOfString:@" " withString:@""];
-        longitudefile = [longitudefile stringByReplacingOccurrencesOfString:@"°" withString:@"."];
-        latitudefile = [latitudefile stringByReplacingOccurrencesOfString:@"'" withString:@""];
-        latitudefile = [latitudefile stringByReplacingOccurrencesOfString:@" " withString:@""];
-        latitudefile = [latitudefile stringByReplacingOccurrencesOfString:@"°" withString:@"."];
-        double flatitude = [latitudefile doubleValue];
-        double flongitude = [longitudefile doubleValue];
-      
-        
-    }
-    
-    
-    
-}
 
 
 - (void)viewDidLoad {
-    NSLog(@"Call Web Service 1");
-    responseData = [[NSMutableData data] retain];
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://tudoporaqui.com.br/globe/GetPresentation.php?id=1"]];
-	[[NSURLConnection alloc] initWithRequest:request delegate:self];
-    NSLog(@"Call Web Service 2");
     UIToolbar *tools = [[UIToolbar alloc]
                         initWithFrame:CGRectMake(0.0f, 0.0f, 103.0f, 44.01f)]; // 44.01 shifts it up 1px for some reason
     tools.clearsContextBeforeDrawing = NO;
