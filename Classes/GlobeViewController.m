@@ -162,7 +162,7 @@
     if ((self = [super initWithNibName:@"World-iPad" bundle:nibBundleOrNil])) 
     {
         CustomTabBarItem *tabItem = [[CustomTabBarItem alloc]
-                                     initWithTitle:@"Presentation" image:nil tag:0];
+                                     initWithTitle:@"Global Touch Points" image:nil tag:0];
         
         tabItem.customHighlightedImage=[UIImage imageNamed:@"tabIconSelected.png"];
         tabItem.customStdImage=[UIImage imageNamed:@"tabIcon.png"];       

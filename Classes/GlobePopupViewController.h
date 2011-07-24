@@ -22,6 +22,11 @@
 
 @interface GlobePopupViewController : UIViewController {
     
+    NSMutableData *responseData;
+	NSMutableArray *theList;                 // list of markers for the globe
+
+    
+    
     IBOutlet UIImageView *currentScreenView;
 	IBOutlet UIView * backgroundView;
 	IBOutlet UIButton * closeButton;
@@ -32,6 +37,7 @@
 	PdfViewController *pdfView;
     id<PopUpViewPDFDelegate> *delegate;
 }
+@property (retain) NSMutableArray *theList;  //list of markers for the globe
 
 @property (nonatomic, assign) id<PopUpViewPDFDelegate> *delegate;
 @property (nonatomic, assign) PdfViewController *pdfView;

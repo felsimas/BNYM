@@ -91,21 +91,21 @@ static GLfloat flippedNormals[500*3];
 - (void) SetLightingModel:(BOOL)lightsOn {
 	
 	if (lightsOn) {
-	/*	glEnable(GL_DEPTH_TEST);
-		glEnable(GL_BLEND);
-		glEnable(GL_TEXTURE_2D);
-        
-		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-        
-		//		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
-		//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		//		glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-		
-		glEnable(GL_LIGHTING);
-		glEnable(GL_LIGHT0);
-		glEnable(GL_DEPTH_TEST);
-		
-		*/
+        /*	glEnable(GL_DEPTH_TEST);
+         glEnable(GL_BLEND);
+         glEnable(GL_TEXTURE_2D);
+         
+         glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+         
+         //		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+         //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+         //		glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+         
+         glEnable(GL_LIGHTING);
+         glEnable(GL_LIGHT0);
+         glEnable(GL_DEPTH_TEST);
+         
+         */
         
         glEnable(GL_DEPTH_TEST);
 		glEnable(GL_BLEND);
@@ -162,7 +162,7 @@ static GLfloat flippedNormals[500*3];
 		[self initGlobeSizeByOrientation:self.parentVC.interfaceOrientation];
 		
         [self loadTexture: 0 Name: @"darkBackground.png"];
-
+        
         
 		//texture 0 is the stars
         //  [self loadTexture: 0 Name: @"Stars"];
@@ -174,7 +174,7 @@ static GLfloat flippedNormals[500*3];
         //texture 3 & 4 are the left and right sides of the world without the countries
         //[self loadTexture: 3 Name: @"PlainGlobe_Left"];
         //[self loadTexture: 4 Name: @"PlainGlobe_Right"];
-
+        
         animationInterval = 1.0 / 60.0;
 		
 		smoothRotator = [[SmoothRotator alloc] init];
@@ -184,10 +184,10 @@ static GLfloat flippedNormals[500*3];
 		//this function initializes The list used for the talk bubble effect
 		totalCoordinates = 0;
 		[self initializeTheMarkerList];
-        	NSLog(@"3");
+        NSLog(@"3");
         //This is setting the default marker effect.
 		[self setGlobeMarkerRenderEffect: pin]; 
-        	NSLog(@"4");
+        NSLog(@"4");
 		
 		//these three variables for to let the globe continue to rotate after a uses ends their touch
 		touchMomentum = NO;
@@ -203,7 +203,7 @@ static GLfloat flippedNormals[500*3];
 		
 		self.exclusiveTouch = YES;
 		[self startAnimation];
-        	NSLog(@"5");
+        NSLog(@"5");
 		//for demo globe
 		mapSwapState = map;
 		showMarkers = YES;
@@ -228,8 +228,8 @@ static GLfloat flippedNormals[500*3];
 		}
 		[self getAsingleMarker];
 		[self lookAtMarker:theCurrentMarker];
-        	NSLog(@"6");
-     
+        NSLog(@"6");
+        
 		//end for demo globe
     }
     return self;
@@ -725,14 +725,14 @@ static GLfloat flippedNormals[500*3];
                     if(theClosestMarker != nil){
                         
                         [self showPopupWindow:theClosestMarker];
-                      /*  alert =
-                        [[UIAlertView alloc] initWithTitle: @"Marker Touched"
-                                                   message: @"You Touched a marker"
-                                                  delegate: self
-                                         cancelButtonTitle: @"OK"
-                                         otherButtonTitles: nil];
-                        [alert show];
-                        [alert release]; */
+                        /*  alert =
+                         [[UIAlertView alloc] initWithTitle: @"Marker Touched"
+                         message: @"You Touched a marker"
+                         delegate: self
+                         cancelButtonTitle: @"OK"
+                         otherButtonTitles: nil];
+                         [alert show];
+                         [alert release]; */
                     }
                     break;
                 case closestMarker:
@@ -1115,7 +1115,7 @@ static GLfloat flippedNormals[500*3];
     [smoothRotator release];
     [delegate release];
     [popUpViewController release];
-   // [popoverController release];
+    // [popoverController release];
     [self stopAnimation];
     
     if ([EAGLContext currentContext] == context) {
@@ -1410,29 +1410,29 @@ static GLfloat flippedNormals[500*3];
 
 - (void)showPopupWindow:(GlobeMarker*)thePlace{
 	//create the view controller from nib
-/*	self.popUpViewController = [[[PopupViewController alloc] 
-                                 initWithNibName:@"ViewWithPicker" 
-                                 bundle:[NSBundle mainBundle]] autorelease];
-    
-    self.popUpViewController._delegate = self; 
-
-	//set popover content size
-	popUpViewController.contentSizeForViewInPopover = 
-    CGSizeMake(popUpViewController.view.frame.size.width, popUpViewController.view.frame.size.height);
-	
-	//set delegate 
-    
-	
-	//create a popover controller
-	self.popoverController = [[[UIPopoverController alloc]
-                               initWithContentViewController:popUpViewController] autorelease];
-    
-	//present the popover view non-modal with a
-	//refrence to the button pressed within the current view
-	[self.popoverController presentPopoverFromRect:CGRectMake(510.0f, 340.f, 10.0f, 10.0f) inView:self 
-						  permittedArrowDirections:0
-                                    animated:YES];
-    */
+    /*	self.popUpViewController = [[[PopupViewController alloc] 
+     initWithNibName:@"ViewWithPicker" 
+     bundle:[NSBundle mainBundle]] autorelease];
+     
+     self.popUpViewController._delegate = self; 
+     
+     //set popover content size
+     popUpViewController.contentSizeForViewInPopover = 
+     CGSizeMake(popUpViewController.view.frame.size.width, popUpViewController.view.frame.size.height);
+     
+     //set delegate 
+     
+     
+     //create a popover controller
+     self.popoverController = [[[UIPopoverController alloc]
+     initWithContentViewController:popUpViewController] autorelease];
+     
+     //present the popover view non-modal with a
+     //refrence to the button pressed within the current view
+     [self.popoverController presentPopoverFromRect:CGRectMake(510.0f, 340.f, 10.0f, 10.0f) inView:self 
+     permittedArrowDirections:0
+     animated:YES];
+     */
     
     [self.delegate launchPopupFromGlobe];
 }

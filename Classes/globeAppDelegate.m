@@ -95,7 +95,18 @@
     [[self tabBarController] setSelectedIndex:aTab];
 }
 
+- (void)reloadGlobe{
+  
+  rootViewController_globe = [[GlobeViewController alloc] initWithNibName:@"World-iPad" bundle:nil]; 
+    globeViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_globe];
+	    
+    [globeViewController viewDidLoad];
 
+    
+    
+    
+    
+}
 
 
 - (void)dealloc {

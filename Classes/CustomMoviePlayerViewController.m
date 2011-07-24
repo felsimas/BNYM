@@ -128,7 +128,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self 
                          selector:@selector(moviePreloadDidFinish:) 
                          name:MPMoviePlayerContentPreloadDidFinishNotification 
-                         object:nil];
+                                               object:nil];
   }
 
   // Register to receive a notification when the movie has finished playing. 

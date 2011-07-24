@@ -3,6 +3,9 @@
 #import "GlobePopupViewController.h"
 #import "CustomMoviePlayerViewController.h"
 #import "PdfViewController.h"
+#import "Presentation.h"
+#import "PointData.h"
+#import "Slide.h"
 
 @implementation GlobePopupViewController
 
@@ -12,6 +15,11 @@
 @synthesize player;
 @synthesize pdfView;
 @synthesize delegate;
+
+
+@synthesize theList;
+
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -32,10 +40,10 @@
 	[UIView setAnimationDelay:.25];
 	//webView.alpha = 1;
 	closeButton.alpha = 1;
-	currentScreen = 1;
+	currentScreen = 0;
 	[UIView commitAnimations];	
-    [currentScreenView setImage:[UIImage imageNamed:@"popup1.png"]]; 
-    
+    //[currentScreenView setImage:[UIImage imageNamed:@"popup1.png"]]; 
+    [self nextScreen];
 }
 
 - (void)playVideoFullScreen:(id)sender{
@@ -132,8 +140,19 @@
 	[self.view removeFromSuperview];
 }
 
+
 -(IBAction) nextScreen{
-    if (currentScreen == 3){
+
+    int count = [[Presentation currentPresentation].points count];
+    NSLog(@"presentation points count %d", count);
+    PointData *point = [[Presentation currentPresentation].points objectAtIndex:0];
+    int numberofSlides = [point.slides count];
+    if (currentScreen == numberofSlides){
+        currentScreen = 0;
+    }
+
+    
+  /*  if (currentScreen == 3){
         self.movieView.alpha = 1;
         [self addMovieView];
         self.movieView.alpha = 1;
@@ -144,18 +163,31 @@
             [view removeFromSuperview];
         }
     
-    }
+    } */
     
-    if (currentScreen == 4){
-        currentScreen = 1;
+    
+    NSLog(@"number of slides %d", numberofSlides);
+    
+    NSArray *foo = [[[point.slides objectAtIndex:currentScreen] valueForKey:@"media"] componentsSeparatedByString: @"bnym/media"];
+    NSString* imageStr1 = [foo objectAtIndex: 1];
+    
+
+
+    NSString *imageStr = [NSString stringWithFormat:@"http://ec2-174-129-66-92.compute-1.amazonaws.com/media/bnym/media%@", imageStr1];
+    NSLog(@"imageStr %@", imageStr);
+
+    NSURL *url = [NSURL URLWithString:imageStr];
+    UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]]; 
+    
+    //NSString *image = [NSString stringWithFormat:@"popup%i.png", currentScreen];
+    [currentScreenView setImage:image]; 
+    
+    
+    if (currentScreen == numberofSlides){
+        currentScreen = 0;
     }else{
         currentScreen = currentScreen + 1;
     }
-
-
-    
-    NSString *image = [NSString stringWithFormat:@"popup%i.png", currentScreen];
-    [currentScreenView setImage:[UIImage imageNamed:image]]; 
 }
 
 - (void)addMovieView{
@@ -192,6 +224,7 @@
 
 
 - (void)dealloc {
+    [theList release];
     [moviePlayer release];
     [delegate release];
     [pdfView release];

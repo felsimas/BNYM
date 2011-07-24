@@ -4,7 +4,6 @@
 #import <Foundation/Foundation.h>
 #import "GlobeMarker.h"
 #import <UIKit/UIKit.h>
-#import <SBJson/SBJson.h>
 
 
 @interface MarkersForGlobeList : NSObject {
