@@ -161,15 +161,19 @@ static GLfloat flippedNormals[500*3];
         
 		[self initGlobeSizeByOrientation:self.parentVC.interfaceOrientation];
 		
-        [self loadTexture: 0 Name: @"darkBackground.png"];
+       [self loadTexture: 0 Name: @"xxx"];
+   //[self setBackgroundColor:[UIColor blackColor]];
         
         
 		//texture 0 is the stars
-        //  [self loadTexture: 0 Name: @"Stars"];
+       //   [self loadTexture: 0 Name: @"Stars"];
         
         //textures 1 & 2 are the left and right side of the world with country names and borders
         [self loadTexture: 1 Name: @"PlainGlobe_Left"];
         [self loadTexture: 2 Name: @"PlainGlobe_Right"];
+        
+        
+        //[self loadTexture: 0 Name: @"Background.png"];
         
         //texture 3 & 4 are the left and right sides of the world without the countries
         //[self loadTexture: 3 Name: @"PlainGlobe_Left"];
@@ -184,10 +188,9 @@ static GLfloat flippedNormals[500*3];
 		//this function initializes The list used for the talk bubble effect
 		totalCoordinates = 0;
 		[self initializeTheMarkerList];
-        NSLog(@"3");
+        
         //This is setting the default marker effect.
-		[self setGlobeMarkerRenderEffect: pin]; 
-        NSLog(@"4");
+		//[self setGlobeMarkerRenderEffect: pin]; 
 		
 		//these three variables for to let the globe continue to rotate after a uses ends their touch
 		touchMomentum = NO;

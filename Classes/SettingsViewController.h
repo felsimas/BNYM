@@ -13,11 +13,17 @@
     UIScrollView *scrollview;
     NSInteger total;
     GlobeViewController *globeViewController;
-    UIViewController *rootViewController_globe;
-
+    //UIViewController *rootViewController_globe;
+    //MarkersForGlobeList *theMarkerList;
+    NSMutableArray *myPresentationsTitle;
+    NSMutableArray *myPresentationsStyle;
+    NSInteger *currentPresentation;
 }
 
 
+@property (nonatomic, retain) NSMutableArray *myPresentationsTitle;
+@property (nonatomic, retain) NSMutableArray *myPresentationsStyle;
+//@property (nonatomic, retain) NSInteger *currentPresentation;
 
 - (void) selectPresentation:(NSInteger*) presentationID;
 
@@ -45,7 +51,7 @@
 
 @property (nonatomic, retain) GlobeViewController *globeViewController;
 @property (nonatomic, retain) IBOutlet UIScrollView *presentationGrid;
-@property (nonatomic, retain) UIViewController *rootViewController_globe;
+
 
 
 

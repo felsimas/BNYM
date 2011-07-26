@@ -39,6 +39,39 @@
 		01A54E1B138A4DEC008AF732 /* btn_window_popup_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A54E1A138A4DEB008AF732 /* btn_window_popup_close.png */; };
 		01B4F960138B68960034ECC3 /* view_presentation1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01B4F95F138B68960034ECC3 /* view_presentation1.png */; };
 		01D0D5A31395DF64003BBFA5 /* bnym.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 01D0D5A21395DF64003BBFA5 /* bnym.pdf */; };
+		38302B0813DDF82E00C74638 /* OldWorld_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B0413DDF82E00C74638 /* OldWorld_Left.png */; };
+		38302B0913DDF82E00C74638 /* NightTimeGlobe_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B0513DDF82E00C74638 /* NightTimeGlobe_Left.png */; };
+		38302B0A13DDF82E00C74638 /* GlobeWithCountries_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B0613DDF82E00C74638 /* GlobeWithCountries_Left.png */; };
+		38302B0B13DDF82E00C74638 /* GeoPolitical_Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B0713DDF82E00C74638 /* GeoPolitical_Left.png */; };
+		38302B1113DDF85700C74638 /* OldWorld_Left.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B0D13DDF85700C74638 /* OldWorld_Left.pvr4 */; };
+		38302B1213DDF85700C74638 /* NightTimeGlobe_Left.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B0E13DDF85700C74638 /* NightTimeGlobe_Left.pvr4 */; };
+		38302B1313DDF85700C74638 /* GlobeWithCountries_Left.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B0F13DDF85700C74638 /* GlobeWithCountries_Left.pvr4 */; };
+		38302B1413DDF85700C74638 /* GeoPolitical_Left.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B1013DDF85700C74638 /* GeoPolitical_Left.pvr4 */; };
+		38302B1913DDF88100C74638 /* OldWorld_Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B1513DDF88100C74638 /* OldWorld_Left@2x.png */; };
+		38302B1A13DDF88100C74638 /* NightTimeGlobe_Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B1613DDF88100C74638 /* NightTimeGlobe_Left@2x.png */; };
+		38302B1B13DDF88100C74638 /* GlobeWithCountries_Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B1713DDF88100C74638 /* GlobeWithCountries_Left@2x.png */; };
+		38302B1C13DDF88100C74638 /* GeoPolitical_Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B1813DDF88100C74638 /* GeoPolitical_Left@2x.png */; };
+		38302B2113DDF8A000C74638 /* OldWorld_Left@2x.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B1D13DDF8A000C74638 /* OldWorld_Left@2x.pvr4 */; };
+		38302B2213DDF8A000C74638 /* NightTimeGlobe_Left@2x.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B1E13DDF8A000C74638 /* NightTimeGlobe_Left@2x.pvr4 */; };
+		38302B2313DDF8A000C74638 /* GlobeWithCountries_Left@2x.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B1F13DDF8A000C74638 /* GlobeWithCountries_Left@2x.pvr4 */; };
+		38302B2413DDF8A000C74638 /* GeoPolitical_Left@2x.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B2013DDF8A000C74638 /* GeoPolitical_Left@2x.pvr4 */; };
+		38302B2913DDF8BF00C74638 /* OldWorld_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B2513DDF8BF00C74638 /* OldWorld_Right.png */; };
+		38302B2A13DDF8BF00C74638 /* NightTimeGlobe_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B2613DDF8BF00C74638 /* NightTimeGlobe_Right.png */; };
+		38302B2B13DDF8BF00C74638 /* GlobeWithCountries_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B2713DDF8BF00C74638 /* GlobeWithCountries_Right.png */; };
+		38302B2C13DDF8BF00C74638 /* GeoPolitical_Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B2813DDF8BF00C74638 /* GeoPolitical_Right.png */; };
+		38302B3113DDF8DA00C74638 /* OldWorld_Right.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B2D13DDF8DA00C74638 /* OldWorld_Right.pvr4 */; };
+		38302B3213DDF8DA00C74638 /* NightTimeGlobe_Right.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B2E13DDF8DA00C74638 /* NightTimeGlobe_Right.pvr4 */; };
+		38302B3313DDF8DA00C74638 /* GlobeWithCountries_Right.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B2F13DDF8DA00C74638 /* GlobeWithCountries_Right.pvr4 */; };
+		38302B3413DDF8DA00C74638 /* GeoPolitical_Right.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B3013DDF8DA00C74638 /* GeoPolitical_Right.pvr4 */; };
+		38302B3913DDF8F400C74638 /* OldWorld_Right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B3513DDF8F400C74638 /* OldWorld_Right@2x.png */; };
+		38302B3A13DDF8F400C74638 /* NightTimeGlobe_Right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B3613DDF8F400C74638 /* NightTimeGlobe_Right@2x.png */; };
+		38302B3B13DDF8F400C74638 /* GlobeWithCountries_Right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B3713DDF8F400C74638 /* GlobeWithCountries_Right@2x.png */; };
+		38302B3C13DDF8F400C74638 /* GeoPolitical_Right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38302B3813DDF8F400C74638 /* GeoPolitical_Right@2x.png */; };
+		38302B4213DDF91C00C74638 /* PlainGlobe_Right.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B3D13DDF91C00C74638 /* PlainGlobe_Right.pvr4 */; };
+		38302B4313DDF91C00C74638 /* OldWorld_Right@2x.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B3E13DDF91C00C74638 /* OldWorld_Right@2x.pvr4 */; };
+		38302B4413DDF91C00C74638 /* NightTimeGlobe_Right@2x.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B3F13DDF91C00C74638 /* NightTimeGlobe_Right@2x.pvr4 */; };
+		38302B4513DDF91C00C74638 /* GlobeWithCountries_Right@2x.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B4013DDF91C00C74638 /* GlobeWithCountries_Right@2x.pvr4 */; };
+		38302B4613DDF91C00C74638 /* GeoPolitical_Right@2x.pvr4 in Resources */ = {isa = PBXBuildFile; fileRef = 38302B4113DDF91C00C74638 /* GeoPolitical_Right@2x.pvr4 */; };
 		38B84F0113BF7A54001C24A1 /* SBJson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B84F0013BF7A54001C24A1 /* SBJson.framework */; };
 		38D3BFE613DA857000AC9E58 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D3BFE513DA856F00AC9E58 /* TestView.xib */; };
 		38E18DF913DB2B7800F040A2 /* ViewWithPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E18DA013DB2B7800F040A2 /* ViewWithPicker.xib */; };
@@ -173,6 +206,39 @@
 		01B4F95F138B68960034ECC3 /* view_presentation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view_presentation1.png; sourceTree = "<group>"; };
 		01D0D5A21395DF64003BBFA5 /* bnym.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = bnym.pdf; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* globe_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globe_Prefix.pch; sourceTree = "<group>"; };
+		38302B0413DDF82E00C74638 /* OldWorld_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OldWorld_Left.png; path = "3Dmodel/Textures/Left Hemisphere/Older Devices/PNG/OldWorld_Left.png"; sourceTree = SOURCE_ROOT; };
+		38302B0513DDF82E00C74638 /* NightTimeGlobe_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NightTimeGlobe_Left.png; path = "3Dmodel/Textures/Left Hemisphere/Older Devices/PNG/NightTimeGlobe_Left.png"; sourceTree = SOURCE_ROOT; };
+		38302B0613DDF82E00C74638 /* GlobeWithCountries_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GlobeWithCountries_Left.png; path = "3Dmodel/Textures/Left Hemisphere/Older Devices/PNG/GlobeWithCountries_Left.png"; sourceTree = SOURCE_ROOT; };
+		38302B0713DDF82E00C74638 /* GeoPolitical_Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GeoPolitical_Left.png; path = "3Dmodel/Textures/Left Hemisphere/Older Devices/PNG/GeoPolitical_Left.png"; sourceTree = SOURCE_ROOT; };
+		38302B0D13DDF85700C74638 /* OldWorld_Left.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OldWorld_Left.pvr4; sourceTree = "<group>"; };
+		38302B0E13DDF85700C74638 /* NightTimeGlobe_Left.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = NightTimeGlobe_Left.pvr4; sourceTree = "<group>"; };
+		38302B0F13DDF85700C74638 /* GlobeWithCountries_Left.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GlobeWithCountries_Left.pvr4; sourceTree = "<group>"; };
+		38302B1013DDF85700C74638 /* GeoPolitical_Left.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeoPolitical_Left.pvr4; sourceTree = "<group>"; };
+		38302B1513DDF88100C74638 /* OldWorld_Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OldWorld_Left@2x.png"; sourceTree = "<group>"; };
+		38302B1613DDF88100C74638 /* NightTimeGlobe_Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NightTimeGlobe_Left@2x.png"; sourceTree = "<group>"; };
+		38302B1713DDF88100C74638 /* GlobeWithCountries_Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GlobeWithCountries_Left@2x.png"; sourceTree = "<group>"; };
+		38302B1813DDF88100C74638 /* GeoPolitical_Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GeoPolitical_Left@2x.png"; sourceTree = "<group>"; };
+		38302B1D13DDF8A000C74638 /* OldWorld_Left@2x.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OldWorld_Left@2x.pvr4"; sourceTree = "<group>"; };
+		38302B1E13DDF8A000C74638 /* NightTimeGlobe_Left@2x.pvr4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NightTimeGlobe_Left@2x.pvr4"; sourceTree = "<group>"; };
+		38302B1F13DDF8A000C74638 /* GlobeWithCountries_Left@2x.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlobeWithCountries_Left@2x.pvr4"; sourceTree = "<group>"; };
+		38302B2013DDF8A000C74638 /* GeoPolitical_Left@2x.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeoPolitical_Left@2x.pvr4"; sourceTree = "<group>"; };
+		38302B2513DDF8BF00C74638 /* OldWorld_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OldWorld_Right.png; sourceTree = "<group>"; };
+		38302B2613DDF8BF00C74638 /* NightTimeGlobe_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NightTimeGlobe_Right.png; sourceTree = "<group>"; };
+		38302B2713DDF8BF00C74638 /* GlobeWithCountries_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GlobeWithCountries_Right.png; sourceTree = "<group>"; };
+		38302B2813DDF8BF00C74638 /* GeoPolitical_Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeoPolitical_Right.png; sourceTree = "<group>"; };
+		38302B2D13DDF8DA00C74638 /* OldWorld_Right.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = OldWorld_Right.pvr4; sourceTree = "<group>"; };
+		38302B2E13DDF8DA00C74638 /* NightTimeGlobe_Right.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = NightTimeGlobe_Right.pvr4; sourceTree = "<group>"; };
+		38302B2F13DDF8DA00C74638 /* GlobeWithCountries_Right.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GlobeWithCountries_Right.pvr4; sourceTree = "<group>"; };
+		38302B3013DDF8DA00C74638 /* GeoPolitical_Right.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeoPolitical_Right.pvr4; sourceTree = "<group>"; };
+		38302B3513DDF8F400C74638 /* OldWorld_Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OldWorld_Right@2x.png"; sourceTree = "<group>"; };
+		38302B3613DDF8F400C74638 /* NightTimeGlobe_Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NightTimeGlobe_Right@2x.png"; sourceTree = "<group>"; };
+		38302B3713DDF8F400C74638 /* GlobeWithCountries_Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GlobeWithCountries_Right@2x.png"; sourceTree = "<group>"; };
+		38302B3813DDF8F400C74638 /* GeoPolitical_Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GeoPolitical_Right@2x.png"; sourceTree = "<group>"; };
+		38302B3D13DDF91C00C74638 /* PlainGlobe_Right.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlainGlobe_Right.pvr4; sourceTree = "<group>"; };
+		38302B3E13DDF91C00C74638 /* OldWorld_Right@2x.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OldWorld_Right@2x.pvr4"; sourceTree = "<group>"; };
+		38302B3F13DDF91C00C74638 /* NightTimeGlobe_Right@2x.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NightTimeGlobe_Right@2x.pvr4"; sourceTree = "<group>"; };
+		38302B4013DDF91C00C74638 /* GlobeWithCountries_Right@2x.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlobeWithCountries_Right@2x.pvr4"; sourceTree = "<group>"; };
+		38302B4113DDF91C00C74638 /* GeoPolitical_Right@2x.pvr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeoPolitical_Right@2x.pvr4"; sourceTree = "<group>"; };
 		38B84F0013BF7A54001C24A1 /* SBJson.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SBJson.framework; path = "../../Library/Developer/Xcode/DerivedData/SBJson-gyggjbnjxrjlwobiltuceotocykl/Build/Products/Debug/SBJson.framework"; sourceTree = "<group>"; };
 		38D3BFE513DA856F00AC9E58 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestView.xib; path = globe.xcodeproj/TestView.xib; sourceTree = "<group>"; };
 		38E18DA013DB2B7800F040A2 /* ViewWithPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewWithPicker.xib; sourceTree = "<group>"; };
@@ -636,6 +702,10 @@
 		8DD04B1513437AFB00F7C1F4 /* PNG */ = {
 			isa = PBXGroup;
 			children = (
+				38302B0413DDF82E00C74638 /* OldWorld_Left.png */,
+				38302B0513DDF82E00C74638 /* NightTimeGlobe_Left.png */,
+				38302B0613DDF82E00C74638 /* GlobeWithCountries_Left.png */,
+				38302B0713DDF82E00C74638 /* GeoPolitical_Left.png */,
 				8DD04B1A13437AFB00F7C1F4 /* PlainGlobe_Left.png */,
 			);
 			path = PNG;
@@ -644,6 +714,10 @@
 		8DD04B1B13437AFB00F7C1F4 /* PVR */ = {
 			isa = PBXGroup;
 			children = (
+				38302B0D13DDF85700C74638 /* OldWorld_Left.pvr4 */,
+				38302B0E13DDF85700C74638 /* NightTimeGlobe_Left.pvr4 */,
+				38302B0F13DDF85700C74638 /* GlobeWithCountries_Left.pvr4 */,
+				38302B1013DDF85700C74638 /* GeoPolitical_Left.pvr4 */,
 				8DD04B2013437AFB00F7C1F4 /* PlainGlobe_Left.pvr4 */,
 			);
 			path = PVR;
@@ -661,6 +735,10 @@
 		8DD04B2213437AFB00F7C1F4 /* PNG */ = {
 			isa = PBXGroup;
 			children = (
+				38302B1513DDF88100C74638 /* OldWorld_Left@2x.png */,
+				38302B1613DDF88100C74638 /* NightTimeGlobe_Left@2x.png */,
+				38302B1713DDF88100C74638 /* GlobeWithCountries_Left@2x.png */,
+				38302B1813DDF88100C74638 /* GeoPolitical_Left@2x.png */,
 				8DD04B2713437AFB00F7C1F4 /* PlainGlobe_Left@2x.png */,
 			);
 			path = PNG;
@@ -669,6 +747,10 @@
 		8DD04B2813437AFB00F7C1F4 /* PVR */ = {
 			isa = PBXGroup;
 			children = (
+				38302B1D13DDF8A000C74638 /* OldWorld_Left@2x.pvr4 */,
+				38302B1E13DDF8A000C74638 /* NightTimeGlobe_Left@2x.pvr4 */,
+				38302B1F13DDF8A000C74638 /* GlobeWithCountries_Left@2x.pvr4 */,
+				38302B2013DDF8A000C74638 /* GeoPolitical_Left@2x.pvr4 */,
 				8DD04B2D13437AFB00F7C1F4 /* PlainGlobe_Left@2x.pvr4 */,
 			);
 			path = PVR;
@@ -705,6 +787,10 @@
 		8DD04B3413437AFB00F7C1F4 /* PNG */ = {
 			isa = PBXGroup;
 			children = (
+				38302B2513DDF8BF00C74638 /* OldWorld_Right.png */,
+				38302B2613DDF8BF00C74638 /* NightTimeGlobe_Right.png */,
+				38302B2713DDF8BF00C74638 /* GlobeWithCountries_Right.png */,
+				38302B2813DDF8BF00C74638 /* GeoPolitical_Right.png */,
 				8DD04B3913437AFB00F7C1F4 /* PlainGlobe_Right.png */,
 			);
 			path = PNG;
@@ -713,6 +799,10 @@
 		8DD04B3A13437AFB00F7C1F4 /* PVR */ = {
 			isa = PBXGroup;
 			children = (
+				38302B2D13DDF8DA00C74638 /* OldWorld_Right.pvr4 */,
+				38302B2E13DDF8DA00C74638 /* NightTimeGlobe_Right.pvr4 */,
+				38302B2F13DDF8DA00C74638 /* GlobeWithCountries_Right.pvr4 */,
+				38302B3013DDF8DA00C74638 /* GeoPolitical_Right.pvr4 */,
 				8DD04B3F13437AFB00F7C1F4 /* PlainGlobe_Right.pvr4 */,
 			);
 			path = PVR;
@@ -730,6 +820,10 @@
 		8DD04B4113437AFB00F7C1F4 /* PNG */ = {
 			isa = PBXGroup;
 			children = (
+				38302B3513DDF8F400C74638 /* OldWorld_Right@2x.png */,
+				38302B3613DDF8F400C74638 /* NightTimeGlobe_Right@2x.png */,
+				38302B3713DDF8F400C74638 /* GlobeWithCountries_Right@2x.png */,
+				38302B3813DDF8F400C74638 /* GeoPolitical_Right@2x.png */,
 				8DD04B4613437AFB00F7C1F4 /* PlainGlobe_Right@2x.png */,
 			);
 			path = PNG;
@@ -738,6 +832,11 @@
 		8DD04B4713437AFB00F7C1F4 /* PVR */ = {
 			isa = PBXGroup;
 			children = (
+				38302B3D13DDF91C00C74638 /* PlainGlobe_Right.pvr4 */,
+				38302B3E13DDF91C00C74638 /* OldWorld_Right@2x.pvr4 */,
+				38302B3F13DDF91C00C74638 /* NightTimeGlobe_Right@2x.pvr4 */,
+				38302B4013DDF91C00C74638 /* GlobeWithCountries_Right@2x.pvr4 */,
+				38302B4113DDF91C00C74638 /* GeoPolitical_Right@2x.pvr4 */,
 				8DD04B4C13437AFB00F7C1F4 /* PlainGlobe_Right@2x.pvr4 */,
 			);
 			path = PVR;
@@ -903,6 +1002,39 @@
 				38E18E1C13DB2B7800F040A2 /* GlobePopupViewController.xib in Resources */,
 				38E18E2513DB2B7800F040A2 /* CustomTabBarItem.xib in Resources */,
 				38E18E2A13DB2B7800F040A2 /* BlankViewController.xib in Resources */,
+				38302B0813DDF82E00C74638 /* OldWorld_Left.png in Resources */,
+				38302B0913DDF82E00C74638 /* NightTimeGlobe_Left.png in Resources */,
+				38302B0A13DDF82E00C74638 /* GlobeWithCountries_Left.png in Resources */,
+				38302B0B13DDF82E00C74638 /* GeoPolitical_Left.png in Resources */,
+				38302B1113DDF85700C74638 /* OldWorld_Left.pvr4 in Resources */,
+				38302B1213DDF85700C74638 /* NightTimeGlobe_Left.pvr4 in Resources */,
+				38302B1313DDF85700C74638 /* GlobeWithCountries_Left.pvr4 in Resources */,
+				38302B1413DDF85700C74638 /* GeoPolitical_Left.pvr4 in Resources */,
+				38302B1913DDF88100C74638 /* OldWorld_Left@2x.png in Resources */,
+				38302B1A13DDF88100C74638 /* NightTimeGlobe_Left@2x.png in Resources */,
+				38302B1B13DDF88100C74638 /* GlobeWithCountries_Left@2x.png in Resources */,
+				38302B1C13DDF88100C74638 /* GeoPolitical_Left@2x.png in Resources */,
+				38302B2113DDF8A000C74638 /* OldWorld_Left@2x.pvr4 in Resources */,
+				38302B2213DDF8A000C74638 /* NightTimeGlobe_Left@2x.pvr4 in Resources */,
+				38302B2313DDF8A000C74638 /* GlobeWithCountries_Left@2x.pvr4 in Resources */,
+				38302B2413DDF8A000C74638 /* GeoPolitical_Left@2x.pvr4 in Resources */,
+				38302B2913DDF8BF00C74638 /* OldWorld_Right.png in Resources */,
+				38302B2A13DDF8BF00C74638 /* NightTimeGlobe_Right.png in Resources */,
+				38302B2B13DDF8BF00C74638 /* GlobeWithCountries_Right.png in Resources */,
+				38302B2C13DDF8BF00C74638 /* GeoPolitical_Right.png in Resources */,
+				38302B3113DDF8DA00C74638 /* OldWorld_Right.pvr4 in Resources */,
+				38302B3213DDF8DA00C74638 /* NightTimeGlobe_Right.pvr4 in Resources */,
+				38302B3313DDF8DA00C74638 /* GlobeWithCountries_Right.pvr4 in Resources */,
+				38302B3413DDF8DA00C74638 /* GeoPolitical_Right.pvr4 in Resources */,
+				38302B3913DDF8F400C74638 /* OldWorld_Right@2x.png in Resources */,
+				38302B3A13DDF8F400C74638 /* NightTimeGlobe_Right@2x.png in Resources */,
+				38302B3B13DDF8F400C74638 /* GlobeWithCountries_Right@2x.png in Resources */,
+				38302B3C13DDF8F400C74638 /* GeoPolitical_Right@2x.png in Resources */,
+				38302B4213DDF91C00C74638 /* PlainGlobe_Right.pvr4 in Resources */,
+				38302B4313DDF91C00C74638 /* OldWorld_Right@2x.pvr4 in Resources */,
+				38302B4413DDF91C00C74638 /* NightTimeGlobe_Right@2x.pvr4 in Resources */,
+				38302B4513DDF91C00C74638 /* GlobeWithCountries_Right@2x.pvr4 in Resources */,
+				38302B4613DDF91C00C74638 /* GeoPolitical_Right@2x.pvr4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

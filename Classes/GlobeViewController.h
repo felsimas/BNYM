@@ -9,6 +9,7 @@
 #import "GlobePopupViewController.h"
 #import "TwitterAuthController.h"
 
+
 @interface GlobeViewController : UIViewController <DDKTabBarDelegate, ChaptersMenuController,DismissPopDelegate, PopUpViewPDFDelegate>{
 	UIActivityIndicatorView *activityIndicator;
 	
@@ -20,10 +21,13 @@
     GlobePopupViewController *controller;
     ChaptersMenuController *_chaptersPicker;
     UIPopoverController *_chaptersPickerPopover;
+
+    MarkersForGlobeList *theMarkerList;
     
     NSMutableData *responseData;
 }
 
+@property (nonatomic, retain) EAGLView *theGlobe;
 @property (nonatomic, retain) ChaptersMenuController *chaptersPicker;
 @property (nonatomic, retain) UIPopoverController *chaptersPickerPopover;
 

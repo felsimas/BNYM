@@ -62,12 +62,12 @@
 
     globeViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_globe];
 	[listOfViewControllers addObject:globeViewController];
-	
-	orbViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_orb];
-    [listOfViewControllers addObject:orbViewController];
 
     presentationViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_presentation];
     [listOfViewControllers addObject:presentationViewController]; 
+    
+    orbViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_orb];
+    [listOfViewControllers addObject:orbViewController];
     
     pollViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_poll];
     [listOfViewControllers addObject:pollViewController];  
@@ -95,16 +95,37 @@
     [[self tabBarController] setSelectedIndex:aTab];
 }
 
-- (void)reloadGlobe{
-  
-  rootViewController_globe = [[GlobeViewController alloc] initWithNibName:@"World-iPad" bundle:nil]; 
-    globeViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_globe];
-	    
-    [globeViewController viewDidLoad];
 
+- (void) addPoint:(double)latitude withArg2:(double)longitude
+{
+    //globeViewController = [[GlobeViewController alloc] init];
+   
+  //  GlobeViewController *globeViewController=[self.tabBarController.viewControllers objectAtIndex:0];
+    //  [listOfViewControllers objectAtIndex:0]
+   // [rootViewController_globe loadTexture: 0 Name: @"darkBackground.png"];
     
+    [rootViewController_globe addPoint:latitude withArg2:longitude];
+
+   // [rootViewController_globe addPoint];
+  //[tabBarController setSelectedIndex:0];
     
+  //  GlobeMarker *aTempMarker;
+  //  aTempMarker = [[GlobeMarker alloc] init];
+  //  CLLocation  *tempLocation = [[CLLocation alloc] initWithLatitude:-27.3548 longitude:-48.3257];
+ //	aTempMarker.location = tempLocation;
+  //  [rootViewController_globe.theGlobe addGlobeMarker:aTempMarker];
+  //  [aTempMarker release];
+//	aTempMarker = nil;
     
+}
+
+
+- (void) changeTexture:(NSString*)type
+{
+    
+    [rootViewController_globe changeTexture:type];
+    
+
     
 }
 

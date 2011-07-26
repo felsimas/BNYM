@@ -52,17 +52,14 @@ static Textures *global_textures = nil;
 }
 
 - (id)init{
-	glow1 = [[Texture2D alloc] initWithImage: [UIImage imageNamed:@"glow1.png"]];
-	glow2 = [[Texture2D alloc] initWithImage: [UIImage imageNamed:@"glow2.png"]];
-	glow3 = [[Texture2D alloc] initWithImage: [UIImage imageNamed:@"glow3.png"]];
+	glow1 = [[Texture2D alloc] initWithImage: [UIImage imageNamed:@"point.png"]];
+	glow2 = [[Texture2D alloc] initWithImage: [UIImage imageNamed:@"point.png"]];
+	glow3 = [[Texture2D alloc] initWithImage: [UIImage imageNamed:@"point.png"]];
 	bubble = mark = [[Texture2D alloc] initWithImage: [UIImage imageNamed:@"logo_arrow.png"]];
 	return self;
 }
 
 @end
-
-
-
 
 
 

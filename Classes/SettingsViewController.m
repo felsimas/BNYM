@@ -3,15 +3,18 @@
 #import "SettingsViewController.h"
 #import "CustomTabBarItem.h"
 #import "GlobeViewController.h"
-
+#import "Presentation.h"
 
 
 @implementation SettingsViewController
 
 @synthesize presentationGrid=_presentationGrid;
 @synthesize globeViewController;
-@synthesize rootViewController_globe;
 
+
+@synthesize myPresentationsTitle=_myPresentationsTitle;
+@synthesize myPresentationsStyle=_myPresentationsStyle;
+//@synthesize currentPresentation;
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
 	[responseData setLength:0];
@@ -29,9 +32,7 @@
 	[connection release];
     
 	NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-	[responseData release];
-    
-    // NSLog(responseString);
+	//[responseData release];
     
     NSDictionary *dictionary = [responseString JSONValue];
     total = [dictionary count];
@@ -39,62 +40,135 @@
     
     NSLog(@"contador: %d",total);
     
+    if (total < 10) { //When selected a point
     
-    UIScrollView *scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(20, 120, self.view.frame.size.width -40, self.view.frame.size.height - 80)]; 
+        globeAppDelegate *globeDelegate = (globeAppDelegate *)[[UIApplication sharedApplication] delegate];
+        for( i = 1; i <= total;i++) {
+            
+            NSString *stri;
+            stri = [NSString stringWithFormat:@"%d",i];
+            
+            NSDictionary *pres = [dictionary objectForKey: stri];
+            
+            double flatitude = [[pres objectForKey:@"latitude"] doubleValue];
+            double flongitude = [[pres objectForKey:@"longitude"] doubleValue];
+            
+             // [globeDelegate addPoint:12.33322 withArg2:-10.2002];
+            
+            [globeDelegate addPoint:flatitude withArg2:flongitude];
+      
+        }
+        
+        //Set Globe Texture
+        NSString *style;
     
-    
-    scrollview.alwaysBounceHorizontal = NO;
-    scrollview.directionalLockEnabled = YES;
-    scrollview.tag = 200;
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 80, 300, 40)];
-    [titleLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
-    titleLabel.text = @"Title";
-    [self.view addSubview:titleLabel];
-    [titleLabel release]; 
-    
-    UILabel *styleLabel = [[UILabel alloc] initWithFrame:CGRectMake(425, 80, 300, 40)];
-    [styleLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
-    styleLabel.text = @"Style";
-    [self.view addSubview:styleLabel];
-    [styleLabel release]; 
-    
-    
-    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(725, 80, 100, 40)];
-    [dateLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
-    dateLabel.text = @"Date";
-    [self.view addSubview:dateLabel];
-    [dateLabel release]; 
-    
-   
-    for( i = 1; i <= total;i++) {
+                 
+        style = [self.myPresentationsStyle objectAtIndex:(currentPresentation-1)];
+        
+      
+        NSComparisonResult resa = [style compare:@"Globe White"];
+        switch (resa) {
+            case NSOrderedSame:
+                [globeDelegate changeTexture:@"white"];
+                break;
+            default:
+                break;
+        }
+        
+        NSComparisonResult resb = [style compare:@"Globe Dark"];
+        switch (resb) {
+            case NSOrderedSame:
+                [globeDelegate changeTexture:@"dark"];
+                break;
+            default:
+                break;
+        }
+        
+        NSComparisonResult resc = [style compare:@"Mosaic"];
+        switch (resc) {
+            case NSOrderedSame:
+                [globeDelegate changeTexture:@"mosaic"];
+                break;
+            default:
+                break;
+        }
 
-        NSString *stri;
-        stri = [NSString stringWithFormat:@"%d",i];
+        [style release];
+ 
         
-        NSDictionary *pres = [dictionary objectForKey: stri];
+        //[spinner stopAnimating];
         
+    }
+    
+    
+    if (total > 10) { //When getting all presentations
+    //Create grid and Insert all presentations
+        UIScrollView *scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(20, 120, self.view.frame.size.width -40, self.view.frame.size.height - 80)]; 
+    
+    
+        scrollview.alwaysBounceHorizontal = NO;
+        scrollview.directionalLockEnabled = YES;
+        scrollview.tag = 200;
         
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, (i-1)*50, 300, 40)];
-        titleLabel.text = [pres objectForKey:@"title"];
-        [scrollview addSubview:titleLabel];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 80, 300, 40)];
+        [titleLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
+        titleLabel.text = @"Title";
+        [self.view addSubview:titleLabel];
         [titleLabel release]; 
-        
-        UILabel *styleLabel = [[UILabel alloc] initWithFrame:CGRectMake(405, (i-1)*50, 300, 40)];
-        styleLabel.text = [pres objectForKey:@"style"];
-        [scrollview addSubview:styleLabel];
+    
+        UILabel *styleLabel = [[UILabel alloc] initWithFrame:CGRectMake(425, 80, 300, 40)];
+        [styleLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
+        styleLabel.text = @"Style";
+        [self.view addSubview:styleLabel];
         [styleLabel release]; 
+    
         
-        
-        UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(705, (i-1)*50, 100, 40)];
-        dateLabel.text = [pres objectForKey:@"date"];
-        [scrollview addSubview:dateLabel];
+        UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(725, 80, 100, 40)];
+        [dateLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:18]];
+        dateLabel.text = @"Date";
+        [self.view addSubview:dateLabel];
         [dateLabel release]; 
+    
+        myPresentationsTitle = [[NSMutableArray alloc]init]; 
+        myPresentationsStyle = [[NSMutableArray alloc]init]; 
+        for( i = 1; i <= total;i++) {
+
+            NSString *stri;
+            stri = [NSString stringWithFormat:@"%d",i];
+        
+            NSDictionary *pres = [dictionary objectForKey: stri];
         
         
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        switch (i)
-        {
+            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, (i-1)*50, 300, 40)];
+            titleLabel.text = [pres objectForKey:@"title"];
+            [scrollview addSubview:titleLabel];
+            [titleLabel release]; 
+        
+            UILabel *styleLabel = [[UILabel alloc] initWithFrame:CGRectMake(405, (i-1)*50, 300, 40)];
+            styleLabel.text = [pres objectForKey:@"style"];
+            [scrollview addSubview:styleLabel];
+            [styleLabel release]; 
+        
+        
+            UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(705, (i-1)*50, 100, 40)];
+            dateLabel.text = [pres objectForKey:@"date"];
+            [scrollview addSubview:dateLabel];
+            [dateLabel release]; 
+        
+            NSString *strtitle;
+            strtitle = [pres objectForKey:@"title"];
+            
+            NSString *strstyle;
+            strstyle = [pres objectForKey:@"style"];
+            
+            [myPresentationsTitle addObject:strtitle];
+            [myPresentationsStyle addObject:strstyle];
+            
+          
+        
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+            switch (i)
+            {
             case 1:
                 [button addTarget:self action:@selector(selectPresentation1:) forControlEvents:UIControlEventTouchDown];
                 break;
@@ -156,25 +230,31 @@
                 [button addTarget:self action:@selector(selectPresentation20:) forControlEvents:UIControlEventTouchDown];
                 break;
                 
-        }
+            }
 
-        
-    
+            
+            
+            
         [button setTitle:@"Select" forState:UIControlStateNormal];
         button.frame = CGRectMake(880, ((i-1)*50), 75, 40);
         [scrollview addSubview:button];
         
         
+        scrollview.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height *total); 
+        [self.view addSubview:scrollview]; // spinner is not visible until started
+            
         
     }
     
-    scrollview.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height *total); 
-    [self.view addSubview:scrollview]; // spinner is not visible until started
+        
+        
+        self.myPresentationsStyle = myPresentationsStyle;
+    
+     
+
+    }
     
     [spinner stopAnimating];
-
-    
-    
     
 }
 
@@ -255,21 +335,17 @@
         [scrollview addSubview:button];
         [(UIScrollView*)[self.view viewWithTag:200] addSubview:button];
         
-        
-  
-        
-       //  rootViewController_globe = [[GlobeViewController alloc] initWithNibName:@"World-iPad" bundle:nil]; 
-       // globeViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController_globe];
 
-        globeAppDelegate *globeDelegate = (globeAppDelegate *)[[UIApplication sharedApplication] delegate];
-        
        
-
-        [globeDelegate reloadGlobe];
-        
-        
     }
     
+    currentPresentation = presentationID;
+    
+    NSMutableData *responseData;
+    responseData = [[NSMutableData data] retain];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://tudoporaqui.com.br/globe/GetLocations.php"]];
+    
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -340,6 +416,12 @@
             
     }
     
+    spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [spinner setCenter:CGPointMake(840,20+ ((i-1)*50))]; // I do this because I'm in landscape mode
+    //[self.view addSubview:spinner]; // spinner is not visible until started
+    [spinner startAnimating];
+     [(UIScrollView*)[self.view viewWithTag:200] addSubview:spinner];
+    
    
     [button setTitle:@"Selected" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -347,6 +429,9 @@
     [scrollview addSubview:button];
     [(UIScrollView*)[self.view viewWithTag:200] addSubview:button];
     
+    
+    
+
     
   
     
@@ -424,12 +509,10 @@
 
     responseData = [[NSMutableData data] retain];
 	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://tudoporaqui.com.br/globe/GetPresentation.php"]];
+	[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     /*http://ec2-174-129-66-92.compute-1.amazonaws.com/api/presentation/*/
     /*http://tudoporaqui.com.br/globe/globe.php*/
-    
-	[[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
 
         
     
@@ -493,6 +576,10 @@
 
 - (void)dealloc
 {
+    myPresentationsTitle = nil;
+    myPresentationsStyle = nil;
+    [myPresentationsTitle release];
+    [myPresentationsTitle release];
     [super dealloc];
 }
 

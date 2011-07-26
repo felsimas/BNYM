@@ -52,7 +52,7 @@ static NSUInteger kNumberOfPages = 3;
     if (self) {
         
         CustomTabBarItem *tabItem = [[CustomTabBarItem alloc]
-                                     initWithTitle:@"Orb" image:nil tag:0];
+                                     initWithTitle:@"Feed" image:nil tag:0];
         
         tabItem.customHighlightedImage=[UIImage imageNamed:@"tabIconSelected.png"];
         tabItem.customStdImage=[UIImage imageNamed:@"tabIcon.png"];       

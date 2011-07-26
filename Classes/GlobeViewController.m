@@ -5,6 +5,7 @@
 #import "CustomTabBarItem.h"
 #import "globeAppDelegate.h"
 #import "PDFExampleViewController.h"
+#import "MarkersForGlobeList.h"
 
 @implementation UINavigationBar (CustomImage)
 - (void)drawRect:(CGRect)rect {
@@ -22,6 +23,43 @@
 - (void)viewDidAppear:(BOOL)animated{
 	NSLog(@"got here vda");
 	//[activityIndicator stopAnimating];
+}
+
+- (void) addPoint:(double)latitude withArg2:(double)longitude
+{
+    
+    //globeViewController = [[GlobeViewController alloc] init];
+       
+    GlobeMarker *aTempMarker;
+    aTempMarker = [[GlobeMarker alloc] init];
+    CLLocation  *tempLocation = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+	aTempMarker.location = tempLocation;
+    [theGlobe addGlobeMarker:aTempMarker];
+    [aTempMarker release];
+	aTempMarker = nil;
+    
+}
+
+- (void) changeTexture:(NSString*)type
+{
+    
+    if (type == @"white"){
+       // [theGlobe setBackgroundColor:[UIColor blackColor]];
+        [theGlobe loadTexture: 1 Name: @"PlainGlobe_Left"];
+        [theGlobe loadTexture: 2 Name: @"PlainGlobe_Right"];
+    }
+    if (type == @"dark"){
+        // [theGlobe setBackgroundColor:[UIColor blackColor]];
+        [theGlobe loadTexture: 1 Name: @"NightTimeGlobe_Left"];
+        [theGlobe loadTexture: 2 Name: @"NightTimeGlobe_Right"];
+    }
+    if (type == @"mosaic"){
+        // [theGlobe setBackgroundColor:[UIColor blackColor]];
+        [theGlobe loadTexture: 1 Name: @"GeoPolitical_Left"];
+        [theGlobe loadTexture: 2 Name: @"GeoPolitical_Right"];
+    }
+
+    
 }
 
 
@@ -124,12 +162,21 @@
 
 
 - (void)launchPopupFromGlobe{
-	GlobePopupViewController *controller =
-    [[GlobePopupViewController alloc] initWithNibName:@"GlobePopupViewController" 
-                                            bundle:nil];
-    controller.delegate = self;
-	[self.view addSubview:controller.view];
-    [GlobePopupViewController release];
+    GlobeMarker *aTempMarker;
+    aTempMarker = [[GlobeMarker alloc] init];
+    CLLocation  *tempLocation = [[CLLocation alloc] initWithLatitude:-27.3548 longitude:-48.3257];
+	aTempMarker.location = tempLocation;
+    [theGlobe addGlobeMarker:aTempMarker];
+    [aTempMarker release];
+	aTempMarker = nil;
+    
+
+	//GlobePopupViewController *controller =
+    //[[GlobePopupViewController alloc] initWithNibName:@"GlobePopupViewController" 
+    //                                        bundle:nil];
+    //controller.delegate = self;
+	//[self.view addSubview:controller.view];
+    //[GlobePopupViewController release];
 }
 
 

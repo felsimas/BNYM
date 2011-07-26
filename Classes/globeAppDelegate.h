@@ -25,6 +25,7 @@
     PollViewController *pollViewController;
     SettingsViewController *settingsViewController;
 	BlankViewController *blankViewController;
+    
 
     UIViewController *rootViewController_globe;
     UIViewController *rootViewController_orb;
@@ -35,6 +36,8 @@
 
 	UINavigationController *navigationController;
 }
+
+
 
 @property (nonatomic, retain) UITabBarController *tabBarController;
 
